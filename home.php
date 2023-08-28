@@ -67,6 +67,8 @@ if (!isset($_SESSION["user_id"])) {
     <script src="js/home.js"></script>
     <script src="js/script.js"></script>
     <script src="js/img.js"></script>
+
+    <p>quero é sexoooooooo</p>
 </body>
 
 </html>
