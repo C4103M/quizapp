@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;900&family=Roboto:wght@300&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+    /* box-sizing: border-box; */
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #29339b;
+    font-family: "Roboto", sans-serif;
+}
+.player {
+    padding: 10px;    
+    margin: 0;
+}
+
+.ranking {
+    max-width: 750px;
+    margin: 10px auto;
+    position: relative;
+    color: #fff;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.myPosition {
+    max-width: 800px;
+    height: 150px;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 20px auto;
+    border-radius: 40px;
+}
+.position1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+.position1 > p {
+    text-align: center;
+    font-size: large;
+}
+.position1 > img {
+    /* scale: 0.8; */
+}
+.profile-position {
+    /* display: flex;
+    align-items: center; */
+}
+.position2 {
+    margin-left: 40px;
+}
+
+.position3 {
+    margin-right: 20px;
+}
+
+.rp {
+    display: flex;
+    flex-direction: column;
+    font-size: 15pt;
+}
+
+
+
+.barra {
+    width: 300px;
+    height: 10px;
+    border-radius: 10px;
+    margin-right: 15px;
+    background-color: azure;
+}
+.progresso {
+    background-color: black;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+}
+.container-bar {
+    background-color: #74a4bc;
+    width: auto;
+    height: 35px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+.container-bar > img {
+    width: 25px;
+    margin: 0 10px;
+}
+.lvl {
+    position: relative;
+    left: -27px;
+    top: 2px;
+    font-size: 12pt;
+}
+.fotoPerfil {
+    width: 100%;
+    height: 100%;
+}
+.ftperfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 5.5px solid #222222;
+    overflow: hidden;
+}
+
+.imgprofile {
+    width: 100%;
+    height: 100%;
+}
+@media (max-width:720px) {
+    .myPosition {
+        display: block;
+        height: 200px;
+        position: relative;
+    }
+    .container-bar {
+        width: 300px;
+        margin: 20px auto;
+    }
+    .position3{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+}

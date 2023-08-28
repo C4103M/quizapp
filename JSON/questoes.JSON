@@ -1,0 +1,94 @@
+{
+  "questoes": {
+    "questao1": {
+      "id": 1,
+      "pergunta": "Qual é a função da memória RAM em um computador?",
+      "alternativa_a": "Armazenar permanentemente arquivos",
+      "alternativa_b": "Executar instruções do sistema operacional",
+      "alternativa_c": "Controlar a temperatura interna do computador",
+      "alternativa_d": "Permitir acesso rápido aos dados temporários",
+      "resposta_correta": "d"
+    },
+    "questao2": {
+      "id": 2,
+      "pergunta": "Qual é a unidade de medida de armazenamento de dados?",
+      "alternativa_a": "Hertz",
+      "alternativa_b": "Watt",
+      "alternativa_c": "Byte",
+      "alternativa_d": "Pixel",
+      "resposta_correta": "c"
+    },
+    "questao3": {
+      "id": 3,
+      "pergunta": "O que é um processador?",
+      "alternativa_a": "Um dispositivo de entrada de dados",
+      "alternativa_b": "Um dispositivo de saída de dados",
+      "alternativa_c": "Um dispositivo de armazenamento de dados",
+      "alternativa_d": "Um dispositivo que executa cálculos e operações lógicas",
+      "resposta_correta": "d"
+    },
+    "questao4": {
+      "id": 4,
+      "pergunta": "Qual é a função da placa-mãe em um computador?",
+      "alternativa_a": "Controlar a iluminação interna do gabinete",
+      "alternativa_b": "Conectar todos os componentes do computador",
+      "alternativa_c": "Armazenar arquivos permanentemente",
+      "alternativa_d": "Controlar a temperatura interna do computador",
+      "resposta_correta": "b"
+    },
+    "questao5": {
+      "id": 5,
+      "pergunta": "O que é um disco rígido (HD)?",
+      "alternativa_a": "Um dispositivo de entrada de dados",
+      "alternativa_b": "Um dispositivo de saída de dados",
+      "alternativa_c": "Um dispositivo de armazenamento de dados permanente",
+      "alternativa_d": "Um dispositivo que executa cálculos e operações lógicas",
+      "resposta_correta": "c"
+    },
+    "questao6": {
+      "id": 6,
+      "pergunta": "Qual é a função da placa de vídeo em um computador?",
+      "alternativa_a": "Conectar todos os componentes do computador",
+      "alternativa_b": "Controlar a iluminação interna do gabinete",
+      "alternativa_c": "Permitir a exibição de imagens na tela",
+      "alternativa_d": "Controlar a temperatura interna do computador",
+      "resposta_correta": "c"
+    },
+    "questao7": {
+      "id": 7,
+      "pergunta": "O que é uma porta USB?",
+      "alternativa_a": "Uma porta de entrada de vídeo",
+      "alternativa_b": "Uma porta de entrada de áudio",
+      "alternativa_c": "Uma porta de entrada de energia",
+      "alternativa_d": "Uma porta de entrada de dados",
+      "resposta_correta": "d"
+    },
+    "questao8": {
+      "id": 8,
+      "pergunta": "O que é uma placa de som?",
+      "alternativa_a": "Um dispositivo que controla a temperatura interna do computador",
+      "alternativa_b": "Um dispositivo que executa cálculos e operações lógicas",
+      "alternativa_c": "Um dispositivo que permite a reprodução de áudio",
+      "alternativa_d": "Um dispositivo que permite a exibição de imagens na tela",
+      "resposta_correta": "c"
+    },
+    "questao9": {
+      "id": 9,
+      "pergunta": "O que é uma fonte de alimentação em um computador?",
+      "alternativa_a": "Um dispositivo que permite a reprodução de áudio",
+      "alternativa_b": "Um dispositivo que fornece energia elétrica para todos os componentes do computador",
+      "alternativa_c": "Um dispositivo que permite a exibição de imagens na tela",
+      "alternativa_d": "Um dispositivo que controla a temperatura interna do computador",
+      "resposta_correta": "b"
+    },
+    "questao10": {
+      "id": 10,
+      "pergunta": "Qual é a função de um modem em um computador?",
+      "alternativa_a": "Conectar o mouse ao computador",
+      "alternativa_b": "Permitir a conexão com uma rede local",
+      "alternativa_c": "Permitir a conexão com a internet",
+      "alternativa_d": "Controlar a temperatura interna do computador",
+      "resposta_correta": "c"
+    }
+  }
+}
