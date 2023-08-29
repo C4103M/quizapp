@@ -14,8 +14,8 @@ body {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 150px 230px 230px 2fr 150px;
-    grid-template-rows: 150px 230px 230px;
+    grid-template-columns: 150px 22em 22em 2fr 150px;
+    grid-template-rows: 150px 22em 22em;
     align-items: center;
     justify-items: center;
     grid-template-areas:
@@ -32,13 +32,14 @@ body {
     grid-area: a;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .grid1 > img {
     width: 40px;
     margin: 0 10px 0 20px;
 }
 .icons {
-    padding: 40px;
+    width: 50%;
 }
 .grid2 {
     grid-area: b;
@@ -47,6 +48,8 @@ body {
     height: 80%;
     border-radius: 60px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .grid3 {
     grid-area: c;
@@ -54,6 +57,9 @@ body {
     width: 80%;
     height: 80%;
     border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .grid4 {
     grid-area: d;
@@ -61,6 +67,9 @@ body {
     width: 80%;
     height: 80%;
     border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .grid5 {
     grid-area: e;
@@ -68,6 +77,9 @@ body {
     width: 80%;
     height: 80%;
     border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .grid6 {
     grid-area: f;
@@ -79,6 +91,9 @@ body {
     border-radius: 60px;
     text-align: center;
     color: #74A4BC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .grid7 {
     grid-area: g;
@@ -103,6 +118,9 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .grid8 > img {
     margin: 15px;
@@ -135,11 +153,14 @@ body {
     font-weight: 900;
     line-height: normal;
 }
-
+.profile {
+    margin: 0 auto;
+}
 .profile p {
     /* font-family: Inter;   */
     font-weight: 400;
-    color: black;
+    color: #222;
+    /* white-space: nowrap;  */
 }
 .profile img {
     width: 100%;
@@ -184,7 +205,6 @@ body {
     
     .grid7 {
         left: 0;
-
         padding: 20px 0 15px 8px;
         flex-direction: column;
         height: auto;

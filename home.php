@@ -31,7 +31,7 @@ if (!isset($_SESSION["user_id"])) {
         <div class="grid7">
             <div>
                 <div class="titulo">
-                    Quiz Info +
+                    Quiz Info 
                 </div>
             </div>
             <div class="profile">

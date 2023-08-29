@@ -29,19 +29,38 @@ lvl.innerHTML = nv.nivel;
 
 var numQuestao = 1;
 
-fetch("./JSON/questoes.JSON")
-    .then((response) => response.json())
-    .then((data) => {
-        jsonData = data;
-    })
-    .catch((error) => {
-        console.error("Erro ao buscar o JSON:", error);
-    });
+// fetch("./JSON/questoes.JSON")
+//     .then((response) => response.json())
+//     .then((data) => {
+//         jsonData = data;
+//     })
+//     .catch((error) => {
+//         console.error("Erro ao buscar o JSON:", error);
+//     });
 
 
-function iniciar() {
+const consultaQuestoes = async (pagina) => {
+    const consulta = await fetch("./includes/consultaquestoes.php?pagina=" + pagina);
+    var jsonStr = await consulta.text();
+    var jsonData = await JSON.parse(jsonStr)
+    console.log(jsonData);
+    return jsonData
+}
 
-    const questaoSorteada = sortear();
+const addxp = async (pagina) => {
+    const add = await fetch("./includes/addxp.php?pagina=" + pagina);
+    const qtdXp = await add.text()
+    if (!isNaN(qtdXp)){
+        return qtdXp;
+    } else {
+        alert('XP não adicionado')
+    }
+}
+
+
+const iniciar = async () => {
+
+    const questaoSorteada = await sortear();
     
     pBemVindos.style.display = 'none';
 
@@ -73,17 +92,9 @@ function validar(){
     }
 }
 
-const addxp = async (pagina) => {
-    const add = await fetch("./includes/addxp.php?pagina=" + pagina);
-    const qtdXp = await add.text()
-    if (!isNaN(qtdXp)){
-        return qtdXp;
-    } else {
-        alert('XP não adicionado')
-    }
-}
 
-function sortear() {
+
+const sortear= async () => {
     const numQuestoes = 10;
 
     // Se todas as questões já foram sorteadas, reinicia a lista de questões sorteadas
@@ -92,13 +103,18 @@ function sortear() {
     }
 
     let indiceSorteado;
+
     do {
         indiceSorteado = Math.floor(Math.random() * numQuestoes);
     } while (questoesSorteadas.includes(indiceSorteado));
 
     questoesSorteadas.push(indiceSorteado);
 
+    let jsonData = await consultaQuestoes(1);
+
+
     questaoSorteada = jsonData.questoes[`questao${indiceSorteado + 1}`];
+    console.log(questaoSorteada);
     return questaoSorteada;
 }
 
