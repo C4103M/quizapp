@@ -34,3 +34,5 @@ function sairCard(element){
     card.setAttribute('style', 'scale:1.0')
     
 }
+
+

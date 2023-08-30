@@ -33,7 +33,7 @@ if (!isset($_SESSION["user_id"])) {
             <p>Alterar Senha</p>
             <img src="img/altersenha.svg" alt="">
         </div>
-        <div class="item" id="item4" onmousedown="clickCard(4)" onmouseup="soltCard(4)" onmouseenter="enterMouse(4)" onmouseout="sairCard(4)">
+        <div class="item" id="item4" onmousedown="clickCard(4)" onmouseup="soltCard(4)" onmouseenter="enterMouse(4)" onmouseout="sairCard(4)" onclick="abrirModal()">
             <p>Alterar Foto de perfil</p>
             <img src="img/profile.svg" alt="">
         </div>
@@ -69,6 +69,9 @@ if (!isset($_SESSION["user_id"])) {
             $(".itens").scrollLeft(scrollLeft - walk);
         });
     </script>
+    <?php
+    include('includes/modal.php');
+    ?>
 
     <script src="js/config.js"></script>
 </body>

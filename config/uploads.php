@@ -21,7 +21,7 @@ if (!isset($_SESSION["user_id"])) {
             <input type="file" name="arquivo" >
             <br><br>
             <input type="submit" name="enviar">
-        </form>
+        </form> 
     </div>
     <?php
         if (isset($_POST["enviar"])){
