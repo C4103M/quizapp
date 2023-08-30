@@ -109,7 +109,7 @@ if ($resultado) {
                             
                             var imgphp = '{$user_image[$user['user_id']]}'
                             imgphp = imgphp.replace(/^\.\.\//, '');
-                            document.write(imgphp)
+                            
                             var fotoPerfil = document.querySelector('#fotoPerfil{$user['user_id']}');
                             if (imgphp !== '') {
                                 fotoPerfil.setAttribute('src', imgphp);

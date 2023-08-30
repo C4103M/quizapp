@@ -39,6 +39,11 @@ if (isset($_POST['email_entrar'])) {
             $_SESSION['user_email'] = $dados_usuario["user_email"];
             $_SESSION['user_xp'] = $dados_usuario["user_xp"];
             $_SESSION['foto_perfil'] = $dados_usuario["img"];
+
+            // if($dados_usuario["img"] == ''){
+            //     $_SESSION['foto_perfil'] = false;
+            // }
+
             header("Location:home.php");
         } else {
             print "<script> alert('Email e senha incorreto'); </script>";

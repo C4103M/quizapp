@@ -32,7 +32,9 @@ if (!isset($_SESSION["user_id"])) {
             </div>
         </div>
         <div class="profile">
-            <img src="img/profile.svg" id="fotoPerfil" alt="profile">
+            <div class="ftperfil">
+                <img src="img/profile.svg" id="fotoPerfil" alt="profile">
+            </div>
             <p style="text-align: center;"><?php print $nome; ?></p>
         </div>
 

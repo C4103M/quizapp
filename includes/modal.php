@@ -45,7 +45,7 @@
     <p>Trocar Foto de Perfil</p>
     <div class="formperfil">
         <form action="" method="post" enctype="multipart/form-data">
-            <input type="file" name="arquivo">
+            <input type="file" name="arquivo" required>
             <br><br>
             <input type="submit" name="enviar">
         </form>
@@ -73,12 +73,14 @@ if (isset($_POST["enviar"])) {
         $arquivo = basename($_FILES['arquivo']['name']);
         $extensao = strrchr($arquivo, ".");
         $extensao = strtolower($extensao);
-        $novoNome = md5(microtime()) . $extensao;
-        $destino = './imagens/'. $novoNome;
+        $novoNome = md5(microtime()).$extensao;
+        $destino = 'imagens/'. $novoNome;
 
-
+        $img = $img;
         if (file_exists($img)) {
             unlink($img);
+        } else {
+            print 'arquivo não existe';
         }
 
         
