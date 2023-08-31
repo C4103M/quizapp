@@ -1,14 +1,14 @@
-<?php 
-if(isset($_GET["erro"])){
-	$erro = $_GET["erro"];
-	if($erro==1){
-		echo "<script> alert('Faça o login novamente!'); </script>";
-		print"";
-	}
-	if($erro==2){
-		echo "<script> alert('Faça o login novamente!'); </script>";
-	}
-} 
+<?php
+if (isset($_GET["erro"])) {
+    $erro = $_GET["erro"];
+    if ($erro == 1) {
+        echo "<script> alert('Faça o login novamente!'); </script>";
+        print "";
+    }
+    if ($erro == 2) {
+        echo "<script> alert('Faça o login novamente!'); </script>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,49 +18,97 @@ if(isset($_GET["erro"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="./css/form.css">
     <title>Login</title>
 </head>
+
 <body>
-    <header>
-        <h1><span>QI+</span> QuizInfo+</h1>
-    </header>
-    <section class="hide">
-        <!-- <img src="imagens/pixel.png" alt=""> -->
-        <h1 class="titulo">Login</h1>
-        <div class="form">
-            <form action="" method="post">
-                <p>Email:</p>
-                <input type="email" placeholder="Usuário:" name="email_entrar" required>
-                <p>Senha:</p>
-                <input type="password" placeholder="Senha:" name="senha_entrar" required>
+    <main>
+        <section class="divwelcome">
+            <section class="boasvindas">
+                <div class="inicialpage">
 
-                <button type="submit" class="btn-enviar">Entrar</button>
+                    <i class="imgbrain"><img src="./img/brain2.svg" alt=""></i>
+                    <p class="txtboasvindas">
+                    Bem-vindo ao nosso emocionante Quiz de Informática! Aqui, exploraremos desde programação até cibersegurança. 
+                    Esteja preparado para desafios que expandirão seu domínio sobre o universo digital. 
+                    Vamos começar essa jornada de conhecimento juntos! <span class="cliqueaqui" onclick="cadastrar()">Clique aqui</span> para criar sua contagratuitamente!
+                    </p>
+            </section>
+            <div class="butonAnimar">
+                <button class="btnlogin" type="submit" onclick="entrar()">Entrar</button>
+            </div>
+            </div>
 
-                <button type="button" class="btn-enviar" onclick="cadastrar()">Cadastre-se</button>
-            </form>
+            <div class="entrar">
+                <div class="form1">
+
+                    <span class="t1">Login</span>
+                    <form action="" id="formLogin" method="post">
+                        <div class="item">
+                            <i><img src="./img/email.svg" alt=""></i>
+                            <input type="email" placeholder="Email:" name="email_entrar" required>
+                        </div>
+                        <div class="item">
+                            <i><img src="./img/cadeado.svg" alt=""></i>
+                            <input type="password" placeholder="Senha:" name="senha_entrar" required>
+                        </div>
+
+                        <div class="item">
+                            <p class="cadparagrafo">Não possui uma conta?<br> <span class="cliqueaqui" onclick="troca2()">Cadastre-se</span></p>
+                            <button type="submit" id="ButonLogin" class="btn-enviar">Entrar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="form2">
+                    <span class="t1">Cadastrar</span>
+                    <form action="" id="formLogin" method="post">
+                        <div class="item">
+                            <i><img src="./img/altername.svg" alt=""></i>
+                            <input type="text" placeholder="Nome de Usuário:" name="nome" required>
+                        </div>
+                        <div class="item">
+                            <i><img src="./img/email.svg" alt=""></i>
+                            <input type="email" placeholder="Email:" name="email" required>
+                        </div>
+                        <div class="item">
+                            <i><img src="./img/cadeado.svg" alt=""></i>
+                            <input type="password" placeholder="Senha:" name="senha" required>
+                        </div>
+                        <div class="item">
+                            <i><img src="./img/cadeado.svg" alt=""></i>
+                            <input type="text" placeholder="Confirmar Senha:">
+                        </div>
+                        <div class="item">
+                            <p class="cadparagrafo">Já possui conta?<br> <span class="cliqueaqui" onclick="troca1()">Entrar</span></p>
+                            <button type="submit" id="ButonLogin">Entrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="divspan">
+            <span class="span1">Quiz</span><br>
+            <span class="span2">Info</span>
         </div>
-    </section>
-    <section class="hide2">
-        <!-- <img src="imagens/pixel.png" alt=""> -->
-        <p class="titulo">Cadastre-se</p>
-        <div class="form">
-            <form action="#" method="post" id="meuFomrulario">
-                <p>Email:</p>
-                <input type="email" placeholder="Email:" name="email" required>
-                <p>Nome:</p>
-                <input type="text" placeholder="Nome de Usuário:" name="nome" required>
-                <p>Senha:</p>
-                <input type="password" placeholder="Senha:" name="senha" required>
-                <button type="submit" class="btn-enviar">Cadastrar</button>
-                <p class="txt-btn">Já possui uma conta? <span onclick="entrar()" id="entre">Entre</span></p>
-            </form>
-        </div>
-    </section>
-    <?php 
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <?php
     include('includes/login.php');
     ?>
-    <script src="js/login.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
