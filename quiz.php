@@ -14,7 +14,7 @@ if (!isset($_SESSION["user_id"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
 </head>
 
 <body>
@@ -54,11 +54,21 @@ if (!isset($_SESSION["user_id"])) {
         </div>
         <div class="exibir">
             <form>
-                <p><span class="nq">1 - </span><span class="enunciado"></span></p><br>
-                <p class="m"><input type="radio" name="resposta" value="a"> A - <span class="la"></span></p>
-                <p class="m"><input type="radio" name="resposta" value="b"> B - <span class="lb"></span></p>
-                <p class="m"><input type="radio" name="resposta" value="c"> C - <span class="lc"></span></p>
-                <p class="m"><input type="radio" name="resposta" value="d"> D - <span class="ld"></span></p>
+                <div class="divpergunta">
+                    <p><span class="nq">1 - </span><span class="enunciado"></span></p><br>
+                </div>
+                <div class="divalternativa" id="divalternativaA" name="a">
+                    <p class="m"><input type="radio" name="resposta" value="a" id="a" style="display:none;"> A - <span class="la"></span></p>
+                </div>
+                <div class="divalternativa" id="divalternativaB">
+                    <p class="m"><input type="radio" name="resposta" value="b" id="b" style="display:none;"> B - <span class="lb"></span></p>
+                </div>
+                <div class="divalternativa" id="divalternativaC">
+                    <p class="m"><input type="radio" name="resposta" value="c" id="c" style="display:none;"> C - <span class="lc"></span></p>
+                </div>
+                <div class="divalternativa" id="divalternativaD">
+                    <p class="m"><input type="radio" name="resposta" value="d" id="d" style="display:none;"> D - <span class="ld"></span></p>
+                </div>
                 <input type="button" onclick="validar()" id="btn2" value="Validar">
             </form>
         </div>
@@ -70,7 +80,8 @@ if (!isset($_SESSION["user_id"])) {
     print "<p id='imgphp' style='display:none;'>$img</p>";
     ?>
 
-    <script src="js/script.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/calcnvl.js"></script>
     <script src="js/img.js"></script>
 </body>
 

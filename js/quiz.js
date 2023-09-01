@@ -1,7 +1,7 @@
 const conteudo = document.getElementById("conteudo");
 const exibir = document.querySelector(".exibir");
 let jsonData;
-let questaoSorteada; 
+let questaoSorteada;
 let questoesSorteadas = [];
 
 const enunciado = document.querySelector(".enunciado");
@@ -14,43 +14,33 @@ const ld = document.querySelector(".ld");
 const pBemVindos = document.querySelector(".inicialText")
 
 
+const divalt_A = document.querySelector('#divalternativaA');
+const divalt_B = document.querySelector('#divalternativaB');
+const divalt_C = document.querySelector('#divalternativaC');
+const divalt_D = document.querySelector('#divalternativaD');
+
+let elementoSelecionado = null;
+
+let altmarcada = document.querySelector('input[name="resposta"]:checked');
+
 const botao = document.querySelector("#btn");
 const botao2 = document.querySelector("#btn2");
 
-const barra = document.querySelector(".barra");
-const varprogresso = document.querySelector(".progresso");
-
-const exphp = document.querySelector('#exphp').textContent; 
-const lvl = document.querySelector('.lvl')
-let nv = calcularProgressoXP(exphp);
-console.log(nv);
-varprogresso.style.width = nv.progresso + '%';
-lvl.innerHTML = nv.nivel;
 
 var numQuestao = 1;
-
-// fetch("./JSON/questoes.JSON")
-//     .then((response) => response.json())
-//     .then((data) => {
-//         jsonData = data;
-//     })
-//     .catch((error) => {
-//         console.error("Erro ao buscar o JSON:", error);
-//     });
-
 
 const consultaQuestoes = async (pagina) => {
     const consulta = await fetch("./includes/consultaquestoes.php?pagina=" + pagina);
     var jsonStr = await consulta.text();
     var jsonData = await JSON.parse(jsonStr)
-    console.log(jsonData);
+    // console.log(jsonData);
     return jsonData
 }
 
 const addxp = async (pagina) => {
     const add = await fetch("./includes/addxp.php?pagina=" + pagina);
     const qtdXp = await add.text()
-    if (!isNaN(qtdXp)){
+    if (!isNaN(qtdXp)) {
         return qtdXp;
     } else {
         alert('XP não adicionado')
@@ -61,7 +51,7 @@ const addxp = async (pagina) => {
 const iniciar = async () => {
 
     const questaoSorteada = await sortear();
-    
+
     pBemVindos.style.display = 'none';
 
     exibir.style.display = "block";
@@ -76,12 +66,13 @@ const iniciar = async () => {
     botao2.style.display = 'block'
 
     numQuestao++;
-    
+
 }
-function validar(){
+function validar() {
     const opcaoSelecionada = document.querySelector('input[name="resposta"]:checked').value;
-    if (opcaoSelecionada == questaoSorteada.resposta_correta){
-        addxp(1).then(qtdXp =>{
+    console.log(opcaoSelecionada);
+    if (opcaoSelecionada == questaoSorteada.resposta_correta) {
+        addxp(1).then(qtdXp => {
             let funProgresso = calcularProgressoXP(qtdXp)
             varprogresso.style.width = funProgresso.progresso + '%'
             lvl.innerHTML = funProgresso.nivel;
@@ -94,7 +85,7 @@ function validar(){
 
 
 
-const sortear= async () => {
+const sortear = async () => {
     const numQuestoes = 10;
 
     // Se todas as questões já foram sorteadas, reinicia a lista de questões sorteadas
@@ -114,7 +105,6 @@ const sortear= async () => {
 
 
     questaoSorteada = jsonData.questoes[`questao${indiceSorteado + 1}`];
-    console.log(questaoSorteada);
     return questaoSorteada;
 }
 
@@ -124,12 +114,10 @@ function calcularProgressoXP(experiencia) {
     const xpAumentoNiveis = [
         10, 10, 10, 10, 10, 15, 15, 15, 15, 15, 20, 20, 20, 20, 20,
     ];
-
     // Inicializa o nível e a experiência mínima e máxima para o nível atual.
     let nivel = 1;
     let xpNivelAtualMin = xpNivel1;
     let xpNivelAtualMax = xpNivel1 + xpAumentoNiveis[0];
-
     // Enquanto a experiência for suficiente para passar para o próximo nível, avance para o próximo nível.
     while (experiencia >= xpNivelAtualMax) {
         nivel++;
@@ -137,7 +125,6 @@ function calcularProgressoXP(experiencia) {
         xpNivelAtualMax +=
             xpAumentoNiveis[Math.min(nivel - 1, xpAumentoNiveis.length - 1)];
     }
-
     // Calcula a porcentagem de progresso para o nível atual.
     const progressoXP =
         ((experiencia - xpNivelAtualMin) /
@@ -149,8 +136,6 @@ function calcularProgressoXP(experiencia) {
         nivel: nivel,
         progresso: progressoXP,
     };
-
-
     /*
     Até o nível 5, a quantidade de pontos para subir de nível é de 10 pontos. A partir do nível 5, 
     a quantidade de experiência necessária para passar de nível 
@@ -159,4 +144,69 @@ function calcularProgressoXP(experiencia) {
     */
 }
 
-// console.log(calcularProgressoXP(84))
+
+
+
+function clicked(alternativa) {
+    if (elementoSelecionado === alternativa) {
+        // Se o elemento já estiver selecionado, volte ao padrão (background white)
+        alternativa.style.background = 'var(--main-color4)';
+        elementoSelecionado = null;
+    } else {
+        // Se outro elemento estiver selecionado, volte ao padrão (background white)
+        if (elementoSelecionado) {
+            elementoSelecionado.style.background = 'var(--main-color4)';
+        }
+        // Defina o novo elemento como selecionado e altere seu background para vermelho
+        elementoSelecionado = alternativa;
+        alternativa.style.background = 'var(--main-color2)';
+
+
+        if (elementoSelecionado.id === 'divalternativaA') {
+            let radioBtn = document.getElementById('a');
+            console.log('a');
+            if (radioBtn) {
+                radioBtn.checked = true;
+            }
+        } else if (elementoSelecionado.id === 'divalternativaB') {
+            let radioBtn = document.getElementById('b');
+            console.log('b');
+
+            if (radioBtn) {
+                radioBtn.checked = true;
+            }
+
+        } else if (elementoSelecionado.id === 'divalternativaC') {
+            let radioBtn = document.getElementById('c');
+            console.log('c');
+
+            if (radioBtn) {
+                radioBtn.checked = true;
+            }
+        } else if (elementoSelecionado.id === 'divalternativaD') {
+            let radioBtn = document.getElementById('d');
+            console.log('d');
+
+            if (radioBtn) {
+                radioBtn.checked = true;
+            }
+        }
+    }
+}
+
+// Adicione o evento de clique aos elementos
+divalt_A.addEventListener('click', function () {
+    clicked(divalt_A);
+});
+
+divalt_B.addEventListener('click', function () {
+    clicked(divalt_B);
+});
+
+divalt_C.addEventListener('click', function () {
+    clicked(divalt_C);
+});
+
+divalt_D.addEventListener('click', function () {
+    clicked(divalt_D);
+});

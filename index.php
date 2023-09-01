@@ -32,7 +32,7 @@ if (isset($_GET["erro"])) {
                     <p class="txtboasvindas">
                     Bem-vindo ao nosso emocionante Quiz de Informática! Aqui, exploraremos desde programação até cibersegurança. 
                     Esteja preparado para desafios que expandirão seu domínio sobre o universo digital. 
-                    Vamos começar essa jornada de conhecimento juntos! <span class="cliqueaqui" onclick="cadastrar()">Clique aqui</span> para criar sua contagratuitamente!
+                    Vamos começar essa jornada de conhecimento juntos! <button class="cliqueaqui" onclick="cadastrar()">Clique aqui</button> para criar sua contagratuitamente!
                     </p>
             </section>
             <div class="butonAnimar">
@@ -55,7 +55,7 @@ if (isset($_GET["erro"])) {
                         </div>
 
                         <div class="item">
-                            <p class="cadparagrafo">Não possui uma conta?<br> <span class="cliqueaqui" onclick="troca2()">Cadastre-se</span></p>
+                            <p class="cadparagrafo">Não possui uma conta?<br> <button class="cliqueaqui" onclick="troca2()">Cadastre-se</button></p>
                             <button type="submit" id="ButonLogin" class="btn-enviar">Entrar</button>
                         </div>
                     </form>
@@ -80,8 +80,8 @@ if (isset($_GET["erro"])) {
                             <input type="text" placeholder="Confirmar Senha:">
                         </div>
                         <div class="item">
-                            <p class="cadparagrafo">Já possui conta?<br> <span class="cliqueaqui" onclick="troca1()">Entrar</span></p>
-                            <button type="submit" id="ButonLogin">Entrar</button>
+                            <p class="cadparagrafo">Já possui conta?<br> <button class="cliqueaqui" onclick="troca1()">Entrar</button></p>
+                            <button type="submit" id="ButonLogin" class="btnlogin">Entrar</button>
                         </div>
                     </form>
                 </div>

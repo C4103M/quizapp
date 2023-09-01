@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto+Mono:wght@600&display=swap");
+
+:root {
+    --main-color1: #29339B;
+    --main-color2: #74A4BC;
+    --main-color3: #222;
+    --main-color4: #D9D9D9;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +14,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #29339b;
+    background-color: var(--main-color1);
     font-family: Inter;
 }
 
@@ -25,7 +33,7 @@ body {
 }
 
 .grid1 {
-    background-color: #74A4BC;
+    background-color: var(--main-color2);
     width: 370px;
     height: 80px;
     border-radius: 20px;
@@ -43,7 +51,7 @@ body {
 }
 .grid2 {
     grid-area: b;
-    background-color: #74A4BC;
+    background-color: var(--main-color2);
     width: 16.875rem;
     height: 16.875rem;
     border-radius: 60px;
@@ -53,7 +61,7 @@ body {
 }
 .grid3 {
     grid-area: c;
-    background-color: #74A4BC;
+    background-color: var(--main-color2);
     width: 16.875rem;
     height: 16.875rem;
     border-radius: 60px;
@@ -63,7 +71,7 @@ body {
 }
 .grid4 {
     grid-area: d;
-    background-color: #74A4BC;
+    background-color: var(--main-color2);
     width: 16.875rem;
     height: 16.875rem;
     border-radius: 60px;
@@ -73,7 +81,7 @@ body {
 }
 .grid5 {
     grid-area: e;
-    background-color: #74A4BC;
+    background-color: var(--main-color2);
     width: 16.875rem;
     height: 16.875rem;
     border-radius: 60px;
@@ -90,7 +98,7 @@ body {
     height: 16.875rem;
     border-radius: 60px;
     text-align: end;
-    color: #74A4BC;
+    color: var(--main-color2);
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -102,8 +110,8 @@ body {
     height: 50%;
     border-radius: 60px;
     font-family: "Roboto Mono", monospace;
-    color: white;
-    background-color: #74A4BC;
+    color: var(--main-color4);
+    background-color: var(--main-color2);
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -115,7 +123,7 @@ body {
 }
 .grid8 {
     grid-area: h;
-    background-color: #74A4BC;
+    background-color: var(--main-color2);
     width: 80px;
     height: 80px;
     border-radius: 100%;
@@ -130,10 +138,10 @@ body {
     width: 16.875rem;
     height: 25px;
     border-radius: 20px;
-    background-color: azure;
+    background-color: var(--main-color4);
 }
 .progresso {
-    background-color: black;
+    background-color: var(--main-color3);
     width: 0;
     height: 100%;
     border-radius: 20px;
@@ -147,7 +155,7 @@ body {
 }
 
 .titulo {
-    color: #000;
+    color: var(--main-color3);
     /* font-family: Inter; */
     font-size: 30pt;
     font-style: italic;
@@ -160,7 +168,7 @@ body {
 .profile p {
     /* font-family: Inter;   */
     font-weight: 400;
-    color: #222;
+    color: var(--main-color3);
     /* white-space: nowrap;  */
 }
 .profile img {
@@ -172,7 +180,7 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    border: 5px solid black;
+    border: 5px solid var(--main-color3);
     overflow: hidden;
 }
 

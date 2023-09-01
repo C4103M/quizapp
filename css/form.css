@@ -4,7 +4,7 @@
     --main-color1: #29339B;
     --main-color2: #74A4BC;
     --main-color3: #222;
-    --main-color4: #fff;
+    --main-color4: #D9D9D9;
 }
 
 * {
@@ -69,6 +69,12 @@ html, body {
 
 .cliqueaqui {
     color: var(--main-color2);
+    background-color: transparent;
+    border: none;
+    font-size: large;
+}
+.cliqueaqui:hover {
+    color: var(--main-color4);
 }
 
 #formLogin>div>input {
@@ -125,7 +131,12 @@ input::placeholder {
     border-radius: 20px;
 
 }
-
+.btnlogin:hover {
+    scale: 1.1;
+}
+.btnlogin:active {
+    scale: 1;
+}
 .cadparagrafo {
     color: var(--main-color4);
     font-family: Inter;

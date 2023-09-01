@@ -74,7 +74,7 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
     print "<p id='imgphp' style='display:none;'>$img</p>";
     ?>
     <script src="js/home.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/calcnvl.js"></script>
     <script src="js/img.js"></script>
 </body>
 
