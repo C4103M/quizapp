@@ -4,9 +4,9 @@ const varprogresso = document.querySelector(".progresso");
 const exphp = document.querySelector('#exphp').textContent;
 const lvl = document.querySelector('.lvl')
 let nv = calcularProgressoXP(exphp);
-console.log(nv);
+// console.log(nv);
 varprogresso.style.width = nv.progresso + '%'; 
-lvl.innerHTML = nv.nivel;
+lvl.innerHTML += nv.nivel;
 
 function calcularProgressoXP(experiencia) {
     // Defina a quantidade de XP necessária para o nível 1 e o aumento por nível.

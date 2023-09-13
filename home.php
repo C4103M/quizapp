@@ -24,48 +24,66 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
 </head>
 
 <body>
-    <main class="container">
-        <div class="grid6" id="e5" <?php print($event5);?>>
-            <span <?php print($event5);?>>QI+</span>
-        </div>
+    <header>
         <div class="grid1">
-            <img src="img/star.svg" alt="star">
-            <div class="lvl"></div>
-            <div class="barra">
-                <div class="progresso"></div>
-            </div>
-        </div>
-        <div class="grid7">
-            <div>
+            <div class="div-foto">
+                <div class="profile">
+                    <div class="ftperfil" onclick="abrirModal()">
+                        <img src="img/profile.svg" id="fotoPerfil" alt="profile">
+                    </div>
+                    <p style="text-align: center; font-size:18pt;"></p>
+                </div>
                 <div class="titulo">
-                <?php print $nome; ?>
+                    <?php print $nome; ?>
                 </div>
             </div>
-            <div class="profile">
-                <div class="ftperfil" onclick="abrirModal()">
-                    <img src="img/profile.svg" id="fotoPerfil" alt="profile">
+            <img src="img/medal.svg" alt="medalha" id="medalha">
+            <div class="div-progresso">
+                <div class="lvl"> <span style="font-size: 0.9rem;"> Nivel</span> </div>
+                <div class="barra">
+                    <div class="progresso"></div>
                 </div>
-                <p style="text-align: center; font-size:18pt;"></p>
             </div>
         </div>
-        <div class="grid2" id="e1" <?php print($event1);?>>
-            <img src="img/brain.svg" alt="brain" class="icons" <?php print($event1);?>>
-        </div>
-        <div class="grid3" id="e2" <?php print($event2);?>>
-            <img src="img/dashboard.svg" alt="dashboard" class="icons" <?php print($event2);?>>
-        </div>
-        <div class="grid4" id="e3" <?php print($event3);?>>
-            <img src="img/info.svg" alt="info" class="icons" <?php print($event3);?>>
-        </div>
-        <div class="grid5" id="e4" <?php print($event4);?>>
-            <img src="img/settings.svg" alt="settings" class="icons" <?php print($event4);?>>
-        </div>
+        <figure class="poweroff">
+            <img src="./img/off.svg" alt="">
+        </figure>
+    </header>
+    <main>
+        <section>
+            <div class="grid2" id="e1">
+                <figure>
+                    <img src="img/brain.svg" alt="brain" class="icons">
+                </figure>
+                <p class="gridp">Iniciar Quiz</p>
+            </div>
+            <div class="grid3" id="e2">
+                <figure>
+                    <img src="img/dashboard.svg" alt="dashboard" class="icons">
+                </figure>
+                <p class="gridp">Ranking</p>
+            </div>
+            <div class="grid4" id="e3">
+                <figure>
+                    <img src="img/info.svg" alt="info" class="icons">
+                </figure>
+                <p class="gridp">Informações</p>
 
-
-        <div class="grid8">
-            <img src="img/off.svg" id="e6" onmousedown="clickCard(6)" onmouseup="soltCard(6)" onmouseenter="enterMouse(6)" onmouseout="sairCard(6)">
-        </div>
+            </div>
+            <div class="grid5" id="e4">
+                <figure>
+                    <img src="img/settings.svg" alt="settings" class="icons">
+                </figure>
+                <p class="gridp">Configurações</p>
+            </div>
+        </section>
+        <section class="sessao2">
+            <figure class="ic-ca">
+                <img src="./img/carlao.png" id="carlao" alt="">
+            </figure>
+        </section>
     </main>
+
 
     <?php
     include('includes/modal.php');

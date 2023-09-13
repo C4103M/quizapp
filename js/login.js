@@ -10,16 +10,16 @@ const form1 = document.querySelector('.form1');
 const form2 = document.querySelector('.form2');
 
 function entrar(){
-    span1.style.animation = 'span1 5s normal forwards';
-    span2.style.animation = 'span2 5s normal forwards';
-    divwelcome.style.animation = 'welcome 5s normal forwards';
+    span1.style.animation = 'span1 1s normal forwards';
+    span2.style.animation = 'span2 1s normal forwards';
+    divwelcome.style.animation = 'welcome 1s normal forwards';
 
     setInterval(troca1(), 500)
 }
 function cadastrar() {
-    span1.style.animation = 'span1 5s normal forwards';
-    span2.style.animation = 'span2 5s normal forwards';
-    divwelcome.style.animation = 'welcome 5s normal forwards';
+    span1.style.animation = 'span1 1s normal forwards';
+    span2.style.animation = 'span2 1s normal forwards';
+    divwelcome.style.animation = 'welcome 1s normal forwards';
 
     setInterval(troca2(),500)
 }

@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto+Mono:wght@600&display=swap");
+
+:root {
+    --main-color1: #29339B;
+    --main-color2: #74A4BC;
+    --main-color3: #222;
+    --main-color4: #D9D9D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color1);
+    font-family: Inter;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10% 20% 20% 40% 10%;
+    grid-template-rows: 20% 40% 40%;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+        "a a k y h"
+        "x b c f z"
+        "x d e g z";
+}
+
+.grid1 {
+    background-color: var(--main-color2);
+    width: 370px;
+    height: 80px;
+    border-radius: 20px;
+    grid-area: a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid1 > img {
+    width: 40px;
+    margin: 0 10px 0 20px;
+}
+.icons {
+    width: 50%;
+}
+.grid2 {
+    grid-area: b;
+    background-color: var(--main-color2);
+    width: 16.875rem;
+    height: 16.875rem;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid3 {
+    grid-area: c;
+    background-color: var(--main-color2);
+    width: 16.875rem;
+    height: 16.875rem;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid4 {
+    grid-area: d;
+    background-color: var(--main-color2);
+    width: 16.875rem;
+    height: 16.875rem;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid5 {
+    grid-area: e;
+    background-color: var(--main-color2);
+    width: 16.875rem;
+    height: 16.875rem;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid6 {
+    grid-area: f;
+    font-size: 15em;
+    font-family: Inter;
+    font-style: italic;
+    width: 16.875rem;
+    height: 16.875rem;
+    border-radius: 60px;
+    text-align: end;
+    color: var(--main-color2);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.grid7 {
+    grid-area: g;
+    /* max-width: 700px; */
+    min-width: 400px;
+    height: 50%;
+    border-radius: 60px;
+    font-family: "Roboto Mono", monospace;
+    color: var(--main-color4);
+    background-color: var(--main-color2);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    left: 100px;
+}
+.grid8 {
+    grid-area: h;
+    background-color: var(--main-color2);
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid8 > img {
+    margin: 15px;
+}
+.barra {
+    width: 16.875rem;
+    height: 25px;
+    border-radius: 20px;
+    background-color: var(--main-color4);
+}
+.progresso {
+    background-color: var(--main-color3);
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.lvl {
+    position: relative;
+    left: -36px;
+    top: 3px;
+    font-size: 15pt;
+}
+
+.titulo {
+    color: var(--main-color3);
+    /* font-family: Inter; */
+    font-size: 30pt;
+    font-style: italic;
+    font-weight: 900;
+    line-height: normal;
+}
+.profile {
+    margin: 0 auto;
+}
+.profile p {
+    /* font-family: Inter;   */
+    font-weight: 400;
+    color: var(--main-color3);
+    /* white-space: nowrap;  */
+}
+.profile img {
+    width: 100%;
+    height: 100%;
+    
+}
+.ftperfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 5px solid var(--main-color3);
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: block;
+    }
+    .grid2,
+    .grid3,
+    .grid4,
+    .grid5,
+    .grid6,
+    .grid7 {
+        width: 250px;
+        height: 250px;
+        margin: 30px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icons {
+        width: 100px;
+    }
+    .grid1 {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .grid1 > img {
+        width: 40px;
+    }
+    
+    .grid7 {
+        left: 0;
+        padding: 20px 0 15px 8px;
+        flex-direction: column;
+        height: auto;
+        min-width: 300px;
+    }
+    .barra {
+        margin-right: 10px;
+    }
+    .grid6 {
+        font-size: 12em;
+    }
+    .grid8 {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .grid2,
+    .grid3,
+    .grid4,
+    .grid5,
+    .grid6,
+    .grid7 {
+        width: 250px;
+    }
+
+}

@@ -14,7 +14,7 @@ if (!empty($pagina)) {
         $result = mysqli_query($con, $sql2);
         if ($result){
             echo $_SESSION['user_xp'] = mysqli_fetch_assoc($result)['user_xp'];
-            // echo mysqli_fetch_assoc($result)['user_xp'];
+            echo mysqli_fetch_assoc($result)['user_xp'];
         }
     } else {
         echo '2';
