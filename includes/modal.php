@@ -7,8 +7,8 @@
     }
 
     .ftperfilmodal {
-        width: 80px;
-        height: 80px;
+        width: 280px;
+        height: 280px;
         border-radius: 100%;
         border: 5px solid black;
         overflow: hidden;
@@ -30,7 +30,7 @@
     }
 
     .imgModal {
-        width: 50px;
+        width: 100%;
     }
 
     .formperfil {
@@ -39,8 +39,8 @@
 </style>
 
 <dialog>
-    <div class="ftperfilmodal" onclick="abrirModal()">
-        <img src="img/camera.svg" id="fotoPerfil" alt="profile" class="imgModal">
+    <div class="ftperfilmodal" >
+        <img src="<?php print $img;?>" id="fotoPerfil" alt="profile" class="imgModal">
     </div>
     <p>Trocar Foto de Perfil</p>
     <div class="formperfil">

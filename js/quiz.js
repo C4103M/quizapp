@@ -23,7 +23,7 @@ let elementoSelecionado = null;
 
 let altmarcada = document.querySelector('input[name="resposta"]:checked');
 
-const botao = document.querySelector("#btn");
+const botao = document.querySelector("#btn1");
 const botao2 = document.querySelector("#btn2");
 
 
@@ -46,13 +46,13 @@ const addxp = async (pagina) => {
         alert('XP não adicionado')
     }
 }
-
+ 
 
 const iniciar = async () => {
 
     const questaoSorteada = await sortear();
 
-    pBemVindos.style.display = 'none';
+    // pBemVindos.style.display = 'none';
 
     exibir.style.display = "block";
     enunciado.innerHTML = questaoSorteada.pergunta;
@@ -150,16 +150,16 @@ function calcularProgressoXP(experiencia) {
 function clicked(alternativa) {
     if (elementoSelecionado === alternativa) {
         // Se o elemento já estiver selecionado, volte ao padrão (background white)
-        alternativa.style.background = 'var(--main-color4)';
+        alternativa.style.background = 'var(--main-elementosmodoclaro)';
         elementoSelecionado = null;
     } else {
         // Se outro elemento estiver selecionado, volte ao padrão (background white)
         if (elementoSelecionado) {
-            elementoSelecionado.style.background = 'var(--main-color4)';
+            elementoSelecionado.style.background = 'var(--main-elementosmodoclaro)';
         }
-        // Defina o novo elemento como selecionado e altere seu background para vermelho
+        // Defina o novo elemento como selecionado e altere seu background para verde
         elementoSelecionado = alternativa;
-        alternativa.style.background = 'var(--main-color2)';
+        alternativa.style.background = 'green';
 
 
         if (elementoSelecionado.id === 'divalternativaA') {
@@ -210,3 +210,21 @@ divalt_C.addEventListener('click', function () {
 divalt_D.addEventListener('click', function () {
     clicked(divalt_D);
 });
+
+const botao3 = document.querySelector('#btn3')
+let contregra = 1
+
+function proximaregra() {
+    contregra++;
+    if (contregra == 2) {
+        nq.innerHTML = 'Selecione a resposta correta dentro do tempo limite para acumular pontos.'
+        
+    } else if (contregra == 3){
+        nq.innerHTML = 'Respostas corretas resultam em pontuação, enquanto respostas incorretas não resultam em penalidades.'
+    } else if (contregra == 4){
+        botao.style.display = 'block'
+        botao3.style.display = 'none'
+        nq.innerHTML = 'Vamos lá?'
+
+    }
+}

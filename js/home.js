@@ -1,7 +1,7 @@
 function clickCard(element){
     const card = document.getElementById(`e${element}`)
     console.log(card);
-    card.setAttribute('style', 'scale:0.9')
+    card.setAttribute('style', 'scale:0.95')
 }
 function soltCard(element){
     const card = document.getElementById(`e${element}`)
@@ -26,7 +26,7 @@ function soltCard(element){
 function enterMouse(element) {
     const card = document.getElementById(`e${element}`)
     console.log(card);
-    card.setAttribute('style', 'scale:1.1')
+    card.setAttribute('style', 'scale:1.05')
 }
 function sairCard(element){
     const card = document.getElementById(`e${element}`)

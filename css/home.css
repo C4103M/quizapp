@@ -3,15 +3,22 @@
     padding: 0;
 }
 :root {
-    --main-fundomodoclaro: #F2F7F2;
-    --main-fundomodoescuro: #222222;
-    --main-cortextomodoclaro: #222222;
-    --main-cortextomodoescuro: #F3F3F3;
-    --main-elementosmodoclaro: #1982C4;
-    --main-elementosmodoescuro: #1E1E1E;
+    --main-background: #F8F8FF;
+    --main-cor-texto: #222222;
+    --main-border: #222222;
+    --main-elementos: #1982C4;
+}
+.dark-mode:root {
+    --main-background: #222;
+    --main-cor-texto: #F3F3F3;
+    --main-border: #000;
+    --main-elementos: #1E1E1E;
+
 }
 
-
+body {
+    background-color: var(--main-background);
+}
 
 /* Cabeçalho */
 header {
@@ -19,10 +26,11 @@ header {
 }
 
 .grid1 {
-    border: 3px solid var(--main-cortextomodoclaro);
+    border: 3px solid var(--main-border);
     border-radius: 15px;
+    background-color: #F3F3F3;
     width: 25%;
-    min-width: 350px;
+    min-width: 450px;
     height: 60px;
     margin: 50px;
     display: flex;
@@ -60,7 +68,7 @@ header {
 
 }
 .progresso {
-    background-color: var(--main-cortextomodoclaro);
+    background-color: var(--main-cor-texto);
     width: 0;
     height: 100%;
     border-radius: 20px;
@@ -91,7 +99,7 @@ main {
 
 }
 .grid2, .grid3, .grid4, .grid5 {
-    background-color: var(--main-elementosmodoclaro);
+    background-color: var(--main-elementos);
     width: 600px;
     height: 150px;
     margin: 30px;
@@ -105,7 +113,7 @@ main {
 .gridp {
     margin-left: 20px;
     font-size: 3rem;
-    color: var(--main-cortextomodoclaro);
+    color: var(--main-cor-texto);
 }
 
 .sessao2 {
@@ -126,3 +134,4 @@ main {
     top: -220px;
     right: -100px;
 }
+

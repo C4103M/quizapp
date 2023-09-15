@@ -51,30 +51,30 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
     </header>
     <main>
         <section>
-            <div class="grid2" id="e1">
+            <div class="grid2" id="e1" <?php print $event1;?>>
                 <figure>
-                    <img src="img/brain.svg" alt="brain" class="icons">
+                    <img src="img/brain.svg" alt="brain" class="icons" <?php print $event1;?>>
                 </figure>
-                <p class="gridp">Iniciar Quiz</p>
+                <p class="gridp" <?php print $event1;?>>Iniciar Quiz</p>
             </div>
-            <div class="grid3" id="e2">
+            <div class="grid3" id="e2" <?php print $event2;?>>
                 <figure>
-                    <img src="img/dashboard.svg" alt="dashboard" class="icons">
+                    <img src="img/dashboard.svg" alt="dashboard" class="icons" <?php print $event2;?>>
                 </figure>
-                <p class="gridp">Ranking</p>
+                <p class="gridp" <?php print $event2;?>>Ranking</p>
             </div>
-            <div class="grid4" id="e3">
+            <div class="grid4" id="e3" <?php print $event3;?>>
                 <figure>
-                    <img src="img/info.svg" alt="info" class="icons">
+                    <img src="img/info.svg" alt="info" class="icons" <?php print $event3;?>>
                 </figure>
-                <p class="gridp">Informações</p>
+                <p class="gridp" <?php print $event3;?>>Informações</p>
 
             </div>
-            <div class="grid5" id="e4">
+            <div class="grid5" id="e4" <?php print $event4;?>>
                 <figure>
-                    <img src="img/settings.svg" alt="settings" class="icons">
+                    <img src="img/settings.svg" alt="settings" class="icons" <?php print $event4;?>>
                 </figure>
-                <p class="gridp">Configurações</p>
+                <p class="gridp" <?php print $event4;?>>Configurações</p>
             </div>
         </section>
         <section class="sessao2">
