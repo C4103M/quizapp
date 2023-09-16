@@ -41,7 +41,7 @@ if (!isset($_SESSION["user_id"])) {
             <p>Deletar conta</p>
             <img src="img/delete.svg" alt="" >
         </div>
-
+        
     </main>
     <script>
         let isMouseDown = false;

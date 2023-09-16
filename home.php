@@ -46,35 +46,41 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
             </div>
         </div>
         <figure class="poweroff">
+            <p>Dark Mode:</p>
+            <label class="switch">
+                <input type="checkbox" id="check" onchange="changeMode()">
+                <span class="slider"></span>
+            </label>
             <img src="./img/off.svg" alt="">
         </figure>
+
     </header>
     <main>
         <section>
-            <div class="grid2" id="e1" <?php print $event1;?>>
+            <div class="grid2" id="e1" <?php print $event1; ?>>
                 <figure>
-                    <img src="img/brain.svg" alt="brain" class="icons" <?php print $event1;?>>
+                    <img src="img/brain.svg" alt="brain" class="icons" <?php print $event1; ?>>
                 </figure>
-                <p class="gridp" <?php print $event1;?>>Iniciar Quiz</p>
+                <p class="gridp" <?php print $event1; ?>>Iniciar Quiz</p>
             </div>
-            <div class="grid3" id="e2" <?php print $event2;?>>
+            <div class="grid3" id="e2" <?php print $event2; ?>>
                 <figure>
-                    <img src="img/dashboard.svg" alt="dashboard" class="icons" <?php print $event2;?>>
+                    <img src="img/dashboard.svg" alt="dashboard" class="icons" <?php print $event2; ?>>
                 </figure>
-                <p class="gridp" <?php print $event2;?>>Ranking</p>
+                <p class="gridp" <?php print $event2; ?>>Ranking</p>
             </div>
-            <div class="grid4" id="e3" <?php print $event3;?>>
+            <div class="grid4" id="e3" <?php print $event3; ?>>
                 <figure>
-                    <img src="img/info.svg" alt="info" class="icons" <?php print $event3;?>>
+                    <img src="img/info.svg" alt="info" class="icons" <?php print $event3; ?>>
                 </figure>
-                <p class="gridp" <?php print $event3;?>>Informações</p>
+                <p class="gridp" <?php print $event3; ?>>Informações</p>
 
             </div>
-            <div class="grid5" id="e4" <?php print $event4;?>>
+            <div class="grid5" id="e4" <?php print $event4; ?>>
                 <figure>
-                    <img src="img/settings.svg" alt="settings" class="icons" <?php print $event4;?>>
+                    <img src="img/settings.svg" alt="settings" class="icons" <?php print $event4; ?>>
                 </figure>
-                <p class="gridp" <?php print $event4;?>>Configurações</p>
+                <p class="gridp" <?php print $event4; ?>>Configurações</p>
             </div>
         </section>
         <section class="sessao2">
@@ -91,6 +97,8 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
     print "<p id='exphp' style='display:none'>$exp</p>";
     print "<p id='imgphp' style='display:none;'>$img</p>";
     ?>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="js/darkmode.js"></script>
     <script src="js/home.js"></script>
     <script src="js/calcnvl.js"></script>
     <script src="js/img.js"></script>

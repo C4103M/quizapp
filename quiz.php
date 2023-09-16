@@ -48,7 +48,8 @@ if (!isset($_SESSION["user_id"])) {
                 <img src="./img/carlaoembranco.png" alt="">
                 <div class="p-pergunta">
                     <div class="divpergunta">
-                        <p><span class="nq">Você será apresentado a uma série de questões de multipla escolha. </span><span class="enunciado"></span></p><br>
+                        <p><span class="nq">Você será apresentado a uma série de questões de multipla escolha.
+                            </span><span class="enunciado"></span></p><br>
                     </div>
                 </div>
             </figure>
@@ -57,16 +58,20 @@ if (!isset($_SESSION["user_id"])) {
             <div class="exibir">
                 <form>
                     <div class="divalternativa" id="divalternativaA" name="a">
-                        <p class="m"><input type="radio" name="resposta" value="a" id="a" style="display:none;"> A - <span class="la"></span></p>
+                        <p class="m"><input type="radio" name="resposta" value="a" id="a" style="display:none;"> A -
+                            <span class="la"></span></p>
                     </div>
                     <div class="divalternativa" id="divalternativaB">
-                        <p class="m"><input type="radio" name="resposta" value="b" id="b" style="display:none;"> B - <span class="lb"></span></p>
+                        <p class="m"><input type="radio" name="resposta" value="b" id="b" style="display:none;"> B -
+                            <span class="lb"></span></p>
                     </div>
                     <div class="divalternativa" id="divalternativaC">
-                        <p class="m"><input type="radio" name="resposta" value="c" id="c" style="display:none;"> C - <span class="lc"></span></p>
+                        <p class="m"><input type="radio" name="resposta" value="c" id="c" style="display:none;"> C -
+                            <span class="lc"></span></p>
                     </div>
                     <div class="divalternativa" id="divalternativaD">
-                        <p class="m"><input type="radio" name="resposta" value="d" id="d" style="display:none;"> D - <span class="ld"></span></p>
+                        <p class="m"><input type="radio" name="resposta" value="d" id="d" style="display:none;"> D -
+                            <span class="ld"></span></p>
                     </div>
                     <input type="button" onclick="validar()" id="btn2" value="Validar">
                 </form>
@@ -80,7 +85,7 @@ if (!isset($_SESSION["user_id"])) {
     print "<p id='exphp' style='display:none'>$exp</p>";
     print "<p id='imgphp' style='display:none;'>$img</p>";
     ?>
-
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="js/quiz.js"></script>
     <script src="js/calcnvl.js"></script>
     <script src="js/img.js"></script>
