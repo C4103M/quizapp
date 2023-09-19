@@ -70,9 +70,9 @@ header {
 }
 
 .grid1 {
-    border: 3px solid var(--main-border);
+    border: 3px solid var(--main-cor-texto);
     border-radius: 15px;
-    background-color: #F3F3F3;
+    /* background-color: #F3F3F3; */
     width: 25%;
     min-width: 450px;
     height: 60px;
@@ -98,6 +98,19 @@ header {
 .titulo {
     text-align: center;
     margin: auto 15px;
+    color: var(--main-cor-texto);
+}
+.lvl {
+    color: var(--main-cor-texto);
+}
+.div-poweroff {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .div-foto {
     margin: 5px;
@@ -153,7 +166,7 @@ main {
     display: flex;
     align-items: center;    
 }
-.icons {
+.icons, .icons2 {
     margin: 0 20px;
 }
 .gridp {

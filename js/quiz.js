@@ -33,7 +33,6 @@ const consultaQuestoes = async (pagina) => {
     const consulta = await fetch("./includes/consultaquestoes.php?pagina=" + pagina);
     var jsonStr = await consulta.text();
     var jsonData = await JSON.parse(jsonStr)
-    // console.log(jsonData);
     return jsonData
 }
 
@@ -52,7 +51,6 @@ const iniciar = async () => {
 
     const questaoSorteada = await sortear();
 
-    // pBemVindos.style.display = 'none';
 
     exibir.style.display = "block";
     enunciado.innerHTML = questaoSorteada.pergunta;

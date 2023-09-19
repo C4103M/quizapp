@@ -37,7 +37,8 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
                     <?php print $nome; ?>
                 </div>
             </div>
-            <img src="img/medal.svg" alt="medalha" id="medalha">
+            <img src="img/medal.svg" alt="medalha" id="medalha" class="icons">
+            <img src="img/dark-mode/medal.svg" alt="medalha" id="medalha" class="icons2">
             <div class="div-progresso">
                 <div class="lvl"> <span style="font-size: 0.9rem;"> Nivel</span> </div>
                 <div class="barra">
@@ -51,7 +52,9 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
                 <input type="checkbox" id="check" onchange="changeMode()">
                 <span class="slider"></span>
             </label>
-            <img src="./img/off.svg" alt="">
+            <div class="div-poweroff">
+                <img src="./img/off.svg" alt="">
+            </div>
         </figure>
 
     </header>
@@ -60,18 +63,21 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
             <div class="grid2" id="e1" <?php print $event1; ?>>
                 <figure>
                     <img src="img/brain.svg" alt="brain" class="icons" <?php print $event1; ?>>
+                    <img src="img/dark-mode/brain.svg" alt="brain" class="icons2" <?php print $event1; ?>>
                 </figure>
                 <p class="gridp" <?php print $event1; ?>>Iniciar Quiz</p>
             </div>
             <div class="grid3" id="e2" <?php print $event2; ?>>
                 <figure>
                     <img src="img/dashboard.svg" alt="dashboard" class="icons" <?php print $event2; ?>>
+                    <img src="img/dark-mode/dashboard.svg" alt="dashboard" class="icons2" <?php print $event2; ?>>
                 </figure>
                 <p class="gridp" <?php print $event2; ?>>Ranking</p>
             </div>
             <div class="grid4" id="e3" <?php print $event3; ?>>
                 <figure>
                     <img src="img/info.svg" alt="info" class="icons" <?php print $event3; ?>>
+                    <img src="img/dark-mode/info.svg" alt="info" class="icons2" <?php print $event3; ?>>
                 </figure>
                 <p class="gridp" <?php print $event3; ?>>Informações</p>
 
@@ -79,6 +85,7 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
             <div class="grid5" id="e4" <?php print $event4; ?>>
                 <figure>
                     <img src="img/settings.svg" alt="settings" class="icons" <?php print $event4; ?>>
+                    <img src="img/dark-mode/settings.svg" alt="settings" class="icons2" <?php print $event4; ?>>
                 </figure>
                 <p class="gridp" <?php print $event4; ?>>Configurações</p>
             </div>
