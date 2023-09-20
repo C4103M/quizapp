@@ -9,22 +9,27 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Inter;
-    /* box-sizing: border-box; */
 }
-
 :root {
-    --main-fundomodoclaro: #F8F8FF;
-    --main-fundomodoescuro: #222222;
-    --main-cortextomodoclaro: #222222;
-    --main-cortextomodoescuro: #F3F3F3;
-    --main-elementosmodoclaro: #1982C4;
-    --main-elementosmodoescuro: #1E1E1E;
+    --main-background: #F8F8FF;
+    --main-cor-texto: #222222;
+    --main-border: #222222;
+    --main-elementos: #1982C4;
+    --main-neutro: #d9d9d9;
+}
+.dark-mode:root {
+    --main-background: #222;
+    --main-cor-texto: #F3F3F3;
+    --main-border: #000;
+    --main-elementos: #1E1E1E;
+    --main-neutro: #d9d9d9;
+
+
 }
 
 /* Cabeçalho */
 body {
-    background-color: var(--main-fundomodoclaro);
+    background-color: var(--main-background);
 }
 
 /* Cabeçalho */
@@ -33,7 +38,7 @@ header {
 }
 
 .grid1 {
-    border: 3px solid var(--main-cortextomodoclaro);
+    border: 3px solid var(--main-cor-texto);
     border-radius: 15px;
     width: 25%;
     min-width: 350px;
@@ -47,7 +52,6 @@ header {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    border: 5px solid var(--main-color3);
     overflow: hidden;
 
 }
@@ -74,7 +78,7 @@ header {
 
 }
 .progresso {
-    background-color: var(--main-cortextomodoclaro);
+    background-color: var(--main-cor-texto);
     width: 0;
     height: 100%;
     border-radius: 20px;
@@ -113,7 +117,7 @@ header {
     width: 100%;
     min-width: 500px;
     min-height: 42px;
-    background-color: var(--main-elementosmodoclaro);
+    background-color: var(--main-elementos);
     margin: 10px auto;
     padding: 5px;
     display: flex;
@@ -126,7 +130,6 @@ header {
 .divpergunta {
     width: 100%;
     min-height: 80px;
-    background-color: var(--main-color4);
     margin: 10px auto;
     padding: 5px;
     border-radius: 8px;
@@ -167,7 +170,7 @@ main {
     position: absolute;
     right: 250px;
     bottom: 250px;
-    background-color: var(--main-elementosmodoclaro);
+    background-color: var(--main-elementos);
     outline: none;
     border: none;
     width: 150px;

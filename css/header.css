@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-background: #F8F8FF;
+    --main-cor-texto: #222222;
+    --main-border: #222222;
+    --main-elementos: #1982C4;
+    --main-neutro: #d9d9d9;
+}
+.dark-mode:root {
+    --main-background: #222;
+    --main-cor-texto: #F3F3F3;
+    --main-border: #000;
+    --main-elementos: #363636;
+    --main-neutro: #d9d9d9;
+
+
+}
+body {
+    background-color: var(--main-background);
+    transition: ease .6s;
+}
+ 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+    margin-right: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--main-neutro);
+    border-radius: 34px;
+    transition: .4s;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background: var(--main-neutro);
+}
+
+input:checked+.slider:before {
+    transform: translateX(34px);
+}
+
+.sun {
+    width: 25px;
+    margin-left: 4px;
+}
+.moon {
+    width: 23px;
+    margin-right: 9px;
+}
+/* Cabeçalho */
+header {
+    display: flex;
+}
+
+.grid1 {
+    border: 3px solid var(--main-cor-texto);
+    border-radius: 15px;
+    /* background-color: #F3F3F3; */
+    width: 25%;
+    min-width: 450px;
+    height: 60px;
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ftperfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 5px solid var(--main-color3);
+    overflow: hidden;
+
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    
+}
+.titulo {
+    text-align: center;
+    margin: auto 15px;
+    color: var(--main-cor-texto);
+}
+.lvl {
+    color: var(--main-cor-texto);
+}
+.div-poweroff {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-foto {
+    margin: 5px;
+    display: flex;
+}
+
+.barra {
+    width: 15em;
+    height: 0.6rem;
+    border-radius: 20px;
+    background-color: var(--main-neutro);
+
+}
+.progresso {
+    background-color: var(--main-border);
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+}
+.div-progresso {
+    margin: auto;
+}
+#medalha {
+    width: 1.5rem;
+    position: relative;
+    right: -20px;
+}
+.divsec {
+    display: flex;
+    width: 100%;
+}
+
+.poweroff {
+    margin: 50px;
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+}

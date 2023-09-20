@@ -18,6 +18,15 @@ if (cookie == 'dark-mode') {
         console.log(img)
         img.setAttribute('style', 'display:block;')
     })
+} else {
+    imagens.forEach((img) => {
+        console.log(img)
+        img.setAttribute('style', 'display:block;')
+    })
+    imagens2.forEach((img) => {
+        console.log(img)
+        img.setAttribute('style', 'display:none;')
+    })
 }
 function changeMode() {
     html.classList.toggle("dark-mode");

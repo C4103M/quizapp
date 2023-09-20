@@ -18,28 +18,9 @@ if (!isset($_SESSION["user_id"])) {
 </head>
 
 <body>
-    <header>
-        <div class="grid1">
-            <div class="div-foto">
-                <div class="profile">
-                    <div class="ftperfil" onclick="abrirModal()">
-                        <img src="img/profile.svg" id="fotoPerfil" alt="profile">
-                    </div>
-                    <p style="text-align: center; font-size:18pt;"></p>
-                </div>
-                <div class="titulo">
-                    <?php print $nome; ?>
-                </div>
-            </div>
-            <img src="img/medal.svg" alt="medalha" id="medalha">
-            <div class="div-progresso">
-                <div class="lvl"> <span style="font-size: 0.9rem;"> Nivel</span> </div>
-                <div class="barra">
-                    <div class="progresso"></div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php
+    include('./includes/header.php')
+        ?>
 
 
     <main>
@@ -59,19 +40,23 @@ if (!isset($_SESSION["user_id"])) {
                 <form>
                     <div class="divalternativa" id="divalternativaA" name="a">
                         <p class="m"><input type="radio" name="resposta" value="a" id="a" style="display:none;"> A -
-                            <span class="la"></span></p>
+                            <span class="la"></span>
+                        </p>
                     </div>
                     <div class="divalternativa" id="divalternativaB">
                         <p class="m"><input type="radio" name="resposta" value="b" id="b" style="display:none;"> B -
-                            <span class="lb"></span></p>
+                            <span class="lb"></span>
+                        </p>
                     </div>
                     <div class="divalternativa" id="divalternativaC">
                         <p class="m"><input type="radio" name="resposta" value="c" id="c" style="display:none;"> C -
-                            <span class="lc"></span></p>
+                            <span class="lc"></span>
+                        </p>
                     </div>
                     <div class="divalternativa" id="divalternativaD">
                         <p class="m"><input type="radio" name="resposta" value="d" id="d" style="display:none;"> D -
-                            <span class="ld"></span></p>
+                            <span class="ld"></span>
+                        </p>
                     </div>
                     <input type="button" onclick="validar()" id="btn2" value="Validar">
                 </form>
@@ -86,6 +71,7 @@ if (!isset($_SESSION["user_id"])) {
     print "<p id='imgphp' style='display:none;'>$img</p>";
     ?>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="js/darkmode.js"></script>
     <script src="js/quiz.js"></script>
     <script src="js/calcnvl.js"></script>
     <script src="js/img.js"></script>

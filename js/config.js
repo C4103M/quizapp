@@ -22,7 +22,7 @@ function soltCard(element){
         location.href = "config/delete.php"
     }
     if (element == 6){
-        location.href = "home.php"
+        location.href = "addquestao.php"
     }
 
     
