@@ -32,10 +32,10 @@ if ($resultado) {
                     <div class='myPosition'>
                         <div class='profile-position'>
                             <div class='position1'>
-                            <div class='ftperfil'>
-                                <img src='img/profile.svg' class='imgprofile' id='fotoPerfil'>
-                            </div>
-                                <p class='rp'>$user_name[$id]</p>
+                                <div class='ftperfil'>
+                                    <img src='img/profile.svg' class='imgprofile' id='fotoPerfil'>
+                                </div>
+                                    <p class='rp'>$user_name[$id]</p>
                             </div>
                             <div class='position2'>
                                 <p><strong>#$user_position[$id]</strong></p>
@@ -43,7 +43,8 @@ if ($resultado) {
                         </div>
                         <div class='position'>
                             <div class='container-bar'>
-                                <img src='img/star.svg' alt='star'>
+                                <img src='img/medal.svg' alt='medal' class='icons'>
+                                <img src='img/dark-mode/medal.svg' alt='medal' class='icons2'>
                                 <div class='lvl'><script>
                                     var prog = calcularProgressoXP({$user_xp[$id]}); 
                                     document.write(prog.nivel);
@@ -93,7 +94,8 @@ if ($resultado) {
                     </div>
                     <div class='position'>
                         <div class='container-bar'>
-                            <img src='img/star.svg' alt='star'>
+                            <img src='img/medal.svg' alt='medal' class='icons'>
+                            <img src='img/dark-mode/medal.svg' alt='medal' class='icons2'>
                             <div class='lvl'><script>
                                 var prog = calcularProgressoXP({$user_xp[$user['user_id']]}); 
                                 document.write(prog.nivel);
@@ -109,7 +111,7 @@ if ($resultado) {
                             
                             var imgphp = '{$user_image[$user['user_id']]}'
                             imgphp = imgphp.replace(/^\.\.\//, '');
-                            document.write(imgphp)
+                            
                             var fotoPerfil = document.querySelector('#fotoPerfil{$user['user_id']}');
                             if (imgphp !== '') {
                                 fotoPerfil.setAttribute('src', imgphp);

@@ -17,14 +17,18 @@ if (!isset($_SESSION["user_id"])) {
 </head>
 
 <body>
+    <?php
+    include('./includes/header.php');
+    ?>
     <?php include("includes/pontuacao.php");
     $exp = $_SESSION['user_xp'];
     print "<p id='exphp' style='display:none'>$exp</p>";
     print "<p id='imgphp' style='display:none;'>$img</p>";
     ?>
-
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="./js/darkmode.js"></script>
     <script src="js/img.js"></script>
 
 </body>
 
-</html> 
+</html>

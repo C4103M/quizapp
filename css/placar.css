@@ -1,16 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;900&family=Roboto:wght@300&display=swap");
 
-
 * {
     margin: 0;
     padding: 0;
-    font-family: Inter;
-    /* box-sizing: border-box; */
 }
+:root {
+    --main-background: #F8F8FF;
+    --main-cor-texto: #222222;
+    --main-border: #222222;
+    --main-elementos: #1982C4;
+    --main-neutro: #d9d9d9;
+}
+.dark-mode:root {
+    --main-background: #222;
+    --main-cor-texto: #F3F3F3;
+    --main-border: #000;
+    --main-elementos: #1E1E1E;
+    --main-neutro: #d9d9d9;
+
+
+}
+
 body {
-    width: 100%;
-    height: 100%;
-    background-color: #29339b;
+    background-color: var(--main-background);
     font-family: "Roboto", sans-serif;
 }
 .player {
@@ -22,23 +34,23 @@ body {
     max-width: 750px;
     margin: 10px auto;
     position: relative;
-    color: #fff;
+    color: var(--main-cor-texto);
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: normal;
     
 }
 .myPosition {
     max-width: 800px;
     height: 150px;
-    background-color: #d9d9d9;
+    background-color: var(--main-neutro);
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto 20px auto;
-    border-radius: 40px;
+    border-radius: 15px;
 }
 .position1 {
     display: flex;
@@ -49,13 +61,7 @@ body {
     text-align: center;
     font-size: large;
 }
-.position1 > img {
-    /* scale: 0.8; */
-}
-.profile-position {
-    /* display: flex;
-    align-items: center; */
-}
+
 .position2 {
     margin-left: 40px;
 }
@@ -77,16 +83,16 @@ body {
     height: 10px;
     border-radius: 10px;
     margin-right: 15px;
-    background-color: azure;
+    background-color: var(--main-neutro);
 }
 .progresso {
-    background-color: black;
+    background-color: var(--main-cor-texto);
     width: 0;
     height: 100%;
     border-radius: 10px;
 }
 .container-bar {
-    background-color: #74a4bc;
+    background-color: var(--main-elementos);
     width: auto;
     height: 35px;
     border-radius: 20px;
@@ -99,10 +105,8 @@ body {
     margin: 0 10px;
 }
 .lvl {
-    position: relative;
-    left: -27px;
-    top: 2px;
     font-size: 12pt;
+    margin-right: 15px;
 }
 .fotoPerfil {
     width: 100%;
@@ -112,7 +116,7 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    border: 5.5px solid #222222;
+    border: 5.5px solid var(--main-cor-texto);
     overflow: hidden;
 }
 

@@ -1,74 +1,270 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
+
+:root {
+    --main-color1: #29339B;
+    --main-color2: #74A4BC;
+    --main-color3: #222;
+    --main-color4: #D9D9D9;
+}
+
+* {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-html{
-    height: 100%;
-    /* background: linear-gradient(to bottom, #ADD8E6, #7895A5); */
-    background-color: #C2C1F0;
-    background-repeat: no-repeat;
-}
-header>h1{
-    text-align: center;
-    font-size: 2rem;
+
+body {
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    color: #091CD9;
+    justify-content: center;
+    background-color: var(--main-color1);
 }
-header>h1>span{
-    font-size: 6rem;
-    color: #000E9B;
+html, body {
+    overflow: hidden;
+   }
+/* section {
+    width: 340px;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: linear-gradient(180deg, var(--main-color2) 0%, rgba(116, 164, 188, 0.44) 33.85%, rgba(116, 164, 188, 0.00) 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.t1 {
+    color: var(--main-color4);
+    font-family: 'Inter';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    top: 20%;
+    left: 10%;
 }
-.titulo{
-    font: normal bold 2.2rem Arial, sans-serif;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: black;
+.form1, .form2 {
+    width: 100%;
+    height: 100%;
+    
+}
+.entrar {
+    display: flex;
+    justify-content: center;
 }
 
-.form{
+#formLogin {
+    width: 80%;
+    position: relative;
+    top: 30%;
+    margin: 0 auto 0 10%;
+    outline: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.cliqueaqui {
+    color: var(--main-color2);
+    background-color: transparent;
+    border: none;
+    font-size: large;
+}
+.cliqueaqui:hover {
+    color: var(--main-color4);
+}
+
+#formLogin>div>input {
+    stroke-width: 2px;
+    stroke: var(--main-color3);
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid var(--main-color3);
+    background: transparent;
+    width: 90%;
+}
+#formLogin>div {
+    display: flex;
+    justify-content: space-around;
+}
+.item {
+    /* position: relative; */
+    /* left: 25px; */
+    margin-bottom: 65px;
+}
+.item > i > img{
+    width: 20px;
+}
+.boasvindas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+input::placeholder {
+    color: rgba(34, 34, 34, 0.54);
+    font-size: 1.2em;
+}
+
+.divcadastro {
+    display: flex;
+    justify-content: space-around;
+    /* width: 100%; */
+}
+/* .paicadastro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */
+.btnlogin, #ButonLogin {
+    width: 100px;
+    height: 30px;
+    /* flex-shrink: 0; */
+    background-color: var(--main-color2);
+    border: none;
+    border-radius: 20px;
+
+}
+.btnlogin:hover {
+    scale: 1.1;
+}
+.btnlogin:active {
+    scale: 1;
+}
+.cadparagrafo {
+    color: var(--main-color4);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    flex-shrink: 0;
+    line-height: normal;
+}
+
+.entrar {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.divspan > span {
+    font-size: clamp(10vw + 1em, 25vw, 26vw + 1em);
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 900;
+    line-height: normal;
+    background-image: linear-gradient(180deg, var(--main-color3) 0%, rgba(34, 34, 34, 0.83) 0%, rgba(34, 34, 34, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    text-align: center;
+    z-index: -1;
+}
+
+.span1 {
+    transform: translateY(-10%);
+    height: 460px;
+    /* animation: span1 5s normal forwards; */
+}
+
+.span2 {
+    height: 450px;
+    transform: translate(0, -10%);
+    /* animation: span2 5s normal forwards; */
+}
+
+.divwelcome {
+    width: 35%;
+    height: 100%;
+    border-radius: 30px;
+    background: linear-gradient(180deg, var(--main-color2) 0%, rgba(116, 164, 188, 0.44) 33.85%, rgba(116, 164, 188, 0.00) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* animation: welcome 5s normal forwards; */
+    /* transform: translate(); */
+    
+
+}
+
+.txtboasvindas {
+    color: var(--main-color3);
+    width: 80%;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.1vw;
+    font-style: italic;
+    font-weight: 900;
+    line-height: normal;
+    margin-top: 50px;
+}
+
+.divspan {
+    font-size: 100%;
+    width: 65%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.inicialpage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
 }
-.form>form>input{
-    width: 300px;
-    height: 30px;
-    border: 3px solid #000E9B;
-    border-radius: 20px;
-    padding-left: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    /* background-color: #c2c1f0; */
-}
-.form>form>p{
-    font: normal bold 1.4rem/2 Arial, sans-serif;
-}
-.form>form{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.btn-enviar{
-    height: 40px;
-    border-radius: 40px;
-    margin-top: 32px; 
-    font-size: 1.2rem;
-    background-color: #000E9B;
-    color: #fff5ff;
-    font-weight: bold;
-}
-.hide {
-    display: block;
-} 
 
-.hide2 {
-    display: none;
+@keyframes span1 {
+    from {
+        transform: translate(0, 10%);
+    }
+    to {
+        transform: translate(-20%, 0);
+    }
 }
-.txt-btn {
-    font-size: 0pt;
-    color: #000E9B;
+@keyframes span2 {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-20%, -35%);
+    }
 }
+@keyframes welcome {
+    from {
+        transform: translate(0, 0);
+        width: 35%;
+        height: 100%;
+    }
+    to {
+        transform: translate(140%, 0);
+        width: 25%;
+        height: 90%;
+    }
+}
+
+

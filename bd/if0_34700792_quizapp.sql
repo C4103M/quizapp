@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: sql313.byetcluster.com
+<<<<<<< HEAD
 -- Tempo de geração: 29/08/2023 às 14:09
+=======
+-- Tempo de geração: 28/08/2023 às 14:28
+>>>>>>> workspace
 -- Versão do servidor: 10.4.17-MariaDB
 -- Versão do PHP: 7.2.22
 

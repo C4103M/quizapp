@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;900&family=Roboto:wght@300&display=swap");
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../font/Cloude_Regular_Bold_1.02.otf') format('truetype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-background: #F8F8FF;
+    --main-cor-texto: #222222;
+    --main-border: #222222;
+    --main-elementos: #1982C4;
+    --main-neutro: #d9d9d9;
+}
+.dark-mode:root {
+    --main-background: #222;
+    --main-cor-texto: #F3F3F3;
+    --main-border: #000;
+    --main-elementos: #1E1E1E;
+    --main-neutro: #d9d9d9;
+
+
+}
+
+/* Cabeçalho */
+body {
+    background-color: var(--main-background);
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+}
+
+.grid1 {
+    border: 3px solid var(--main-cor-texto);
+    border-radius: 15px;
+    width: 25%;
+    min-width: 350px;
+    height: 60px;
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ftperfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    
+}
+.titulo {
+    text-align: center;
+    margin: auto 15px;
+}
+.div-foto {
+    margin: 5px;
+    display: flex;
+}
+
+.barra {
+    width: 15em;
+    height: 0.6rem;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+
+}
+.progresso {
+    background-color: var(--main-cor-texto);
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+}
+.div-progresso {
+    margin: auto;
+}
+#medalha {
+    width: 1.5rem;
+    position: relative;
+    right: -20px;
+}
+.divsec {
+    display: flex;
+    width: 100%;
+}
+
+/* Perguntas */
+
+.exibir {
+    display: none;
+    font-size: 15pt;
+    /* margin: 30px; */
+}
+#btn2 {
+    width: 80%;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    background-color: #74a4bc;
+    margin-bottom: 10px;
+    right: 50px;
+    margin: 20px auto;
+}
+.divalternativa {
+    width: 100%;
+    min-width: 500px;
+    min-height: 42px;
+    background-color: var(--main-elementos);
+    margin: 10px auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+.divalternativa:hover {
+    background-color: rgb(116, 177, 116);
+}
+.divpergunta {
+    width: 100%;
+    min-height: 80px;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+/*  */
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 300px 0 0 0;
+}
+
+.carlaobranco {
+    position: absolute;
+    left: 10%;
+    top: 150px;
+    z-index: -1;
+}
+.p-pergunta {
+    font-size: 3em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    left: 110px;
+}
+.nq {
+    font-family: Pixel;
+}
+.enunciado {
+    font-family: Pixel;
+}
+.pai-btn {
+    /* position: relative; */
+}
+.btn {
+    position: absolute;
+    right: 250px;
+    bottom: 250px;
+    background-color: var(--main-elementos);
+    outline: none;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 15px;
+}
+#btn1 {
+    display: none;
+}
