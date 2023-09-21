@@ -123,7 +123,7 @@ if (!isset($_SESSION["user_id"]) or $_SESSION['permission'] != 'admin') {
                             <option value="hardware">Hardware</option>
                             <option value="sistemas_operacionais">Sistemas Operacionais</option>
                             <option value="estilizacao">Estilização</option>
-                            <option value="bd">Banco de dados</option>
+                            <option value="banco_de_dados">Banco de dados</option>
                         </select>
                     </div>
                     <div>

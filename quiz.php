@@ -38,6 +38,9 @@ if (!isset($_SESSION["user_id"])) {
         <section class="pai-btn">
             <div class="exibir">
                 <form>
+                    <figure >
+                        <img src="./img/balao2.svg" alt="" class="balao3">
+                    </figure>
                     <div class="divalternativa" id="divalternativaA" name="a">
                         <p class="m"><input type="radio" name="resposta" value="a" id="a" style="display:none;"> A -
                             <span class="la"></span>
@@ -59,6 +62,29 @@ if (!isset($_SESSION["user_id"])) {
                         </p>
                     </div>
                     <input type="button" onclick="validar()" id="btn2" value="Validar">
+                </form>
+            </div>
+            <div class="opc">
+                <figure class="balao2">
+                    <img src="./img/balao2.svg" alt="">
+                </figure>
+                <form action="">
+                    <div class="opc1">
+                        <input type="checkbox" name="check1" value="programacao">
+                        <label for="check1">Programação</label>
+                    </div>
+                    <div class="opc1">
+                        <input type="checkbox" name="check1" value="banco_de_dados">
+                        <label for="check1">Banco de dados</label>
+                    </div>
+                    <div class="opc1">
+                        <input type="checkbox" name="check1" value="hardware">
+                        <label for="check1">Hardware</label>
+                    </div>
+                    <div class="opc1">
+                        <input type="checkbox" name="check1" value="sistemas_operacionais">
+                        <label for="check1">Sistemas Operacionais</label>
+                    </div>
                 </form>
             </div>
             <button onclick="proximaregra()" class="btn" id="btn3">Próximo</button>

@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: 'Pixel';
-    src: url('../font/Cloude_Regular_Bold_1.02.otf') format('truetype');
+    /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
+    src: url('../font/Cloude_Regular_Bold_1.02.ttf') format('truetype');
 }
 
 
@@ -156,16 +157,16 @@ main {
     align-items: center;
     top: 0px;
     left: 110px;
+    line-height:20px;
 }
+
 .nq {
     font-family: Pixel;
 }
 .enunciado {
     font-family: Pixel;
 }
-.pai-btn {
-    /* position: relative; */
-}
+
 .btn {
     position: absolute;
     right: 250px;
@@ -179,5 +180,39 @@ main {
     border-radius: 15px;
 }
 #btn1 {
+    display: none;
+}
+
+.opc form {
+    display: none;
+    width: 350px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+.opc1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Pixel;
+    font-size: 30pt;
+}
+.opc1 input {
+    margin-right: 10px;
+}
+.balao2 {
+    position: absolute;
+    z-index: -1;
+}
+.balao3 {
+    position:absolute; 
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -20%);
+    z-index: -1;
+}
+.opc {
     display: none;
 }
