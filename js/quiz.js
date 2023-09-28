@@ -24,7 +24,6 @@ let elementoSelecionado = null;
 let altmarcada = document.querySelector('input[name="resposta"]:checked');
 
 const opc = document.querySelector('.opc')
-const balao3 = document.querySelector('.balao3')
 
 var numQuestao = 1;
 
@@ -51,7 +50,6 @@ const iniciar = async () => {
     const questaoSorteada = await sortear();
 
     opc.style.display = 'none';
-    balao3.style.width = '600px'
     
     exibir.style.display = "block";
     enunciado.innerHTML = questaoSorteada.pergunta;

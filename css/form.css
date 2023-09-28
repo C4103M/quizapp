@@ -1,41 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;900&display=swap');
 
-:root {
-    --main-color1: #29339B;
-    --main-color2: #74A4BC;
-    --main-color3: #222;
-    --main-color4: #D9D9D9;
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+:root {
+    --main-background: #F8F8FF;
+    --main-cor-texto: #222222;
+    --main-border: #222222;
+    --main-elementos: #1982C4;
+    --main-neutro: #d9d9d9;
+}
+.dark-mode:root {
+    --main-background: #222;
+    --main-cor-texto: #F3F3F3;
+    --main-border: #000;
+    --main-elementos: #363636;
+    --main-neutro: #d9d9d9;
 }
 
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: var(--main-color1);
+    background-color: var(--main-background);
 }
 html, body {
     overflow: hidden;
    }
-/* section {
-    width: 340px;
-    height: 600px;
-    flex-shrink: 0;
-    border-radius: 30px;
-    background: linear-gradient(180deg, var(--main-color2) 0%, rgba(116, 164, 188, 0.44) 33.85%, rgba(116, 164, 188, 0.00) 100%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
 
 .t1 {
-    color: var(--main-color4);
+    /* color: var(--main-color4); */
     font-family: 'Inter';
     font-size: 32px;
     font-style: normal;
@@ -68,21 +60,21 @@ html, body {
 }
 
 .cliqueaqui {
-    color: var(--main-color2);
+    color: var(--main-elementos);
     background-color: transparent;
     border: none;
     font-size: large;
 }
 .cliqueaqui:hover {
-    color: var(--main-color4);
+    color: var(--main-neutro);
 }
 
 #formLogin>div>input {
     stroke-width: 2px;
-    stroke: var(--main-color3);
+    stroke: var(--main-cor-texto);
     outline: none;
     border: 0;
-    border-bottom: 2px solid var(--main-color3);
+    border-bottom: 2px solid var(--main-cor-texto);
     background: transparent;
     width: 90%;
 }
@@ -126,7 +118,7 @@ input::placeholder {
     width: 100px;
     height: 30px;
     /* flex-shrink: 0; */
-    background-color: var(--main-color2);
+    background-color: var(--main-elementos);
     border: none;
     border-radius: 20px;
 
@@ -138,7 +130,7 @@ input::placeholder {
     scale: 1;
 }
 .cadparagrafo {
-    color: var(--main-color4);
+    color: var(--main-neutro);
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
@@ -169,7 +161,7 @@ main {
     font-style: italic;
     font-weight: 900;
     line-height: normal;
-    background-image: linear-gradient(180deg, var(--main-color3) 0%, rgba(34, 34, 34, 0.83) 0%, rgba(34, 34, 34, 0.00) 100%);
+    background-image: linear-gradient(180deg, var(--main-cor-texto) 0%, rgba(34, 34, 34, 0.83) 0%, rgba(34, 34, 34, 0.00) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -194,7 +186,7 @@ main {
     width: 35%;
     height: 100%;
     border-radius: 30px;
-    background: linear-gradient(180deg, var(--main-color2) 0%, rgba(116, 164, 188, 0.44) 33.85%, rgba(116, 164, 188, 0.00) 100%);
+    background: linear-gradient(180deg, var(--main-elementos) 0%, rgba(116, 164, 188, 0.44) 33.85%, rgba(116, 164, 188, 0.00) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,7 +198,7 @@ main {
 }
 
 .txtboasvindas {
-    color: var(--main-color3);
+    color: var(--main-cor-texto);
     width: 80%;
     text-align: center;
     font-family: Inter;

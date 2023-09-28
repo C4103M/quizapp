@@ -38,9 +38,6 @@ if (!isset($_SESSION["user_id"])) {
         <section class="pai-btn">
             <div class="exibir">
                 <form>
-                    <figure >
-                        <img src="./img/balao2.svg" alt="" class="balao3">
-                    </figure>
                     <div class="divalternativa" id="divalternativaA" name="a">
                         <p class="m"><input type="radio" name="resposta" value="a" id="a" style="display:none;"> A -
                             <span class="la"></span>
@@ -74,21 +71,21 @@ if (!isset($_SESSION["user_id"])) {
                         <label for="check1">Programação</label>
                     </div>
                     <div class="opc1">
-                        <input type="checkbox" name="check1" value="banco_de_dados">
-                        <label for="check1">Banco de dados</label>
+                        <input type="checkbox" name="check2" value="banco_de_dados">
+                        <label for="check2">Banco de dados</label>
                     </div>
                     <div class="opc1">
-                        <input type="checkbox" name="check1" value="hardware">
-                        <label for="check1">Hardware</label>
+                        <input type="checkbox" name="check3" value="hardware">
+                        <label for="check3">Hardware</label>
                     </div>
                     <div class="opc1">
-                        <input type="checkbox" name="check1" value="sistemas_operacionais">
-                        <label for="check1">Sistemas Operacionais</label>
+                        <input type="checkbox" name="check4" value="sistemas_operacionais">
+                        <label for="check4">Sistemas Operacionais</label>
                     </div>
                 </form>
             </div>
             <button onclick="proximaregra()" class="btn" id="btn3">Próximo</button>
-            <button onclick="iniciar()" id="btn1" class="btn">Iniciar Quiz</button>
+            <button onclick="iniciar()" id="btn1" class="btn" type="button">Iniciar Quiz</button>
         </section>
     </main>
     <?php
