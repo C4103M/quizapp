@@ -67,19 +67,19 @@ if (!isset($_SESSION["user_id"])) {
                 </figure>
                 <form action="">
                     <div class="opc1">
-                        <input type="checkbox" name="check1" value="programacao">
+                        <input type="checkbox" name="check1" id="check1" value="programacao">
                         <label for="check1">Programação</label>
                     </div>
                     <div class="opc1">
-                        <input type="checkbox" name="check2" value="banco_de_dados">
+                        <input type="checkbox" name="check2" id="check2" value="banco_de_dados">
                         <label for="check2">Banco de dados</label>
                     </div>
                     <div class="opc1">
-                        <input type="checkbox" name="check3" value="hardware">
+                        <input type="checkbox" name="check3" id="check3" value="hardware">
                         <label for="check3">Hardware</label>
                     </div>
                     <div class="opc1">
-                        <input type="checkbox" name="check4" value="sistemas_operacionais">
+                        <input type="checkbox" name="check4" id="check4" value="sistemas_operacionais">
                         <label for="check4">Sistemas Operacionais</label>
                     </div>
                 </form>

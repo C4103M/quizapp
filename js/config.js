@@ -19,10 +19,10 @@ function soltCard(element){
         location.href = "config/altsenha.php"
     }
     if (element == 5){
-        location.href = "config/delete.php"
+        location.href = "./config/delete.php"
     }
     if (element == 6){
-        location.href = "addquestao.php"
+        location.href = "./addquestao.php"
     }
 
     

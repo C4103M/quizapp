@@ -23,7 +23,7 @@ if ($resultado) {
         $user_image[$user['user_id']] = $user['img'];
         $posicao++;
         $user_position[$user['user_id']] = $posicao;
-
+ 
 
         if ($id == $user['user_id']) {
             print "
@@ -50,13 +50,13 @@ if ($resultado) {
                                     document.write(prog.nivel);
                                 </script></div>
                                 <div class='barra'>
-                                    <div class='progresso'></div>
+                                    <div class='myprogresso'></div>
                                 </div>
                             </div>
                             <script>
-                                var varprogresso = document.querySelector('.progresso');
+                                var varmyprogresso = document.querySelector('.myprogresso');
                                 var prog = calcularProgressoXP({$user_xp[$id]}); 
-                                varprogresso.style.width = prog.progresso + '%';
+                                varmyprogresso.style.width = prog.progresso + '%';
 
                                 var imgphp = '{$user_image[$id]}';
                                 imgphp = imgphp.replace(/^\.\.\//, '');
@@ -76,28 +76,29 @@ if ($resultado) {
     }
     print "<p class='ranking'>Ranking:</p>";
     foreach ($users as $user) {
+        if ($user_xp[$user['user_id']] != 0) {
 
-
-        print "
+            
+            print "
             <div class='player'>
                 <div class='myPosition'>
                     <div class='profile-position'>
                         <div class='position1'>
-                            <div class='ftperfil'>
+                        <div class='ftperfil'>
                                 <img src='img/profile.svg' class='imgprofile' id='fotoPerfil{$user['user_id']}'>
                             </div>
                             <p>{$user_name[$user['user_id']]}</p>
                         </div>
                         <div class='position2'>
-                            <p class='rp'><strong>#{$user_position[$user['user_id']]}</strong></p>
+                        <p class='rp'><strong>#{$user_position[$user['user_id']]}</strong></p>
                         </div>
-                    </div>
-                    <div class='position'>
+                        </div>
+                        <div class='position'>
                         <div class='container-bar'>
                             <img src='img/medal.svg' alt='medal' class='icons'>
                             <img src='img/dark-mode/medal.svg' alt='medal' class='icons2'>
                             <div class='lvl'><script>
-                                var prog = calcularProgressoXP({$user_xp[$user['user_id']]}); 
+                            var prog = calcularProgressoXP({$user_xp[$user['user_id']]}); 
                                 document.write(prog.nivel);
                             </script></div>
                             <div class='barra'>
@@ -116,13 +117,14 @@ if ($resultado) {
                             if (imgphp !== '') {
                                 fotoPerfil.setAttribute('src', imgphp);
                             }
-                        </script>
-                    </div>
-                    <div class='position3'>
-                        <p class='rp'><span>Pontos:</span> <span id='rp'>{$user_xp[$user['user_id']]}</span></p>
-                    </div>
-                </div>
-            </div>
-        ";
+                            </script>
+                            </div>
+                            <div class='position3'>
+                            <p class='rp'><span>Pontos:</span> <span id='rp'>{$user_xp[$user['user_id']]}</span></p>
+                            </div>
+                            </div>
+                            </div>
+                            ";
+                        }
     }
 }

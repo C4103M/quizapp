@@ -1,7 +1,7 @@
 <style>
     dialog {
         width: 600px;
-        height: 400px;
+        height: 500px;
         margin: auto auto;
         border-radius: 40px;
     }

@@ -1,6 +1,7 @@
 <?php
 session_start();
 $nome = $_SESSION['user_name'];
+$img = $_SESSION['foto_perfil'];
 if (!isset($_SESSION["user_id"])) {
     header("Location:index.php?erro=2");
 }
@@ -40,15 +41,15 @@ if (!isset($_SESSION["user_id"])) {
             <img src="img/dark-mode/alterfoto.svg" alt="" class="icons2">
             <p>Alterar Foto de perfil</p>
         </div>
+        <div class="item admin" id="item6" onmousedown="clickCard(6)" onmouseup="soltCard(6)" onmouseenter="enterMouse(6)" onmouseout="sairCard(6)">
+            <img src="img/more.svg" alt="" class="icons">
+            <img src="img/more.svg" alt="" class="icons2">
+            <p>Adicionar Questão</p>
+        </div>
         <div class="item" id="item5" onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="enterMouse(5)"onmouseout="sairCard(5)">
             <img src="img/delete.svg" alt="" class="icons">
             <img src="img/dark-mode/delete.svg" alt="" class="icons2">
             <p>Deletar conta</p>
-        </div>
-        <div class="item admin" id="item6" onmousedown="clickCard(6)" onmouseup="soltCard(6)" onmouseenter="enterMouse(6)" onmouseout="sairCard(6)">
-            <img src="img/delete.svg" alt="" class="icons">
-            <img src="img/dark-mode/delete.svg" alt="" class="icons2">
-            <p>Criar Quiz</p>
         </div>
 
     </main>
@@ -57,10 +58,13 @@ if (!isset($_SESSION["user_id"])) {
     </script>
     <?php
     include('includes/modal.php');
+    $exp = $_SESSION['user_xp'];
+    print "<p id='exphp' style='display:none'>$exp</p>";
+    print "<p id='imgphp' style='display:none;'>$img</p>";
 
     $privilegios = $_SESSION['permission'];
     if ($privilegios == 'admin') {
-        print "<script> divAdmin.style.display = 'block' </script>";
+        print "<script> divAdmin.style.display = 'flex' </script>";
     } else {
         print "<script> divAdmin.style.display = 'none' </script>";
 
@@ -75,6 +79,7 @@ if (!isset($_SESSION["user_id"])) {
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="js/darkmode.js"></script>
     <script src="js/img.js"></script>
+    <script src="js/calcnvl.js"></script>
     <script src="js/config.js"></script>
 </body>
 

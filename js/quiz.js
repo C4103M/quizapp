@@ -46,24 +46,36 @@ const addxp = async (pagina) => {
 
 
 const iniciar = async () => {
-    
-    const questaoSorteada = await sortear();
 
-    opc.style.display = 'none';
-    
-    exibir.style.display = "block";
-    enunciado.innerHTML = questaoSorteada.pergunta;
-    nq.innerHTML = numQuestao + ' - '
-    la.innerHTML = questaoSorteada.alternativa_a;
-    lb.innerHTML = questaoSorteada.alternativa_b;
-    lc.innerHTML = questaoSorteada.alternativa_c;
-    ld.innerHTML = questaoSorteada.alternativa_d;
+    let checkbox1 = document.getElementById('check1');
+    let checkbox2 = document.getElementById('check2');
+    let checkbox3 = document.getElementById('check3');
+    let checkbox4 = document.getElementById('check4');
 
-    botao.style.display = 'none'
-    botao2.style.display = 'block'
-    
-    numQuestao++;
-    
+    if (checkbox1.checked  || checkbox2.checked || checkbox3.checked || checkbox4.checked) {
+
+        const questaoSorteada = await sortear();
+
+        opc.style.display = 'none';
+
+        exibir.style.display = "block";
+        enunciado.innerHTML = questaoSorteada.pergunta;
+        nq.innerHTML = numQuestao + ' - '
+        la.innerHTML = questaoSorteada.alternativa_a;
+        lb.innerHTML = questaoSorteada.alternativa_b;
+        lc.innerHTML = questaoSorteada.alternativa_c;
+        ld.innerHTML = questaoSorteada.alternativa_d;
+
+        botao.style.display = 'none'
+        botao2.style.display = 'block'
+
+        numQuestao++;
+
+    }
+
+
+
+
 }
 function validar() {
     const opcaoSelecionada = document.querySelector('input[name="resposta"]:checked').value;
@@ -85,7 +97,7 @@ function validar() {
 const sortear = async () => {
     let jsonData = await consultaQuestoes(1);
 
-    const numQuestoes = jsonData.questoes.qtd;
+    let numQuestoes = jsonData.questoes.qtd;
 
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let marcados = [];
@@ -135,14 +147,14 @@ function calcularProgressoXP(experiencia) {
         nivel++;
         xpNivelAtualMin = xpNivelAtualMax;
         xpNivelAtualMax +=
-        xpAumentoNiveis[Math.min(nivel - 1, xpAumentoNiveis.length - 1)];
+            xpAumentoNiveis[Math.min(nivel - 1, xpAumentoNiveis.length - 1)];
     }
     // Calcula a porcentagem de progresso para o nível atual.
     const progressoXP =
-    ((experiencia - xpNivelAtualMin) /
-    (xpNivelAtualMax - xpNivelAtualMin)) *
-    100;
-    
+        ((experiencia - xpNivelAtualMin) /
+            (xpNivelAtualMax - xpNivelAtualMin)) *
+        100;
+
     // Retorna o nível e a porcentagem de progresso como um objeto.
     return {
         nivel: nivel,
@@ -172,8 +184,8 @@ function clicked(alternativa) {
         // Defina o novo elemento como selecionado e altere seu background para verde
         elementoSelecionado = alternativa;
         alternativa.style.background = 'green';
-        
-        
+
+
         if (elementoSelecionado.id === 'divalternativaA') {
             let radioBtn = document.getElementById('a');
             console.log('a');
@@ -183,22 +195,22 @@ function clicked(alternativa) {
         } else if (elementoSelecionado.id === 'divalternativaB') {
             let radioBtn = document.getElementById('b');
             console.log('b');
-            
+
             if (radioBtn) {
                 radioBtn.checked = true;
             }
-            
+
         } else if (elementoSelecionado.id === 'divalternativaC') {
             let radioBtn = document.getElementById('c');
             console.log('c');
-            
+
             if (radioBtn) {
                 radioBtn.checked = true;
             }
         } else if (elementoSelecionado.id === 'divalternativaD') {
             let radioBtn = document.getElementById('d');
             console.log('d');
-            
+
             if (radioBtn) {
                 radioBtn.checked = true;
             }
@@ -233,12 +245,12 @@ function proximaregra() {
     contregra++;
     if (contregra == 2) {
         nq.innerHTML = 'Selecione a resposta correta dentro do tempo limite para acumular pontos.'
-        
-    } else if (contregra == 3){
+
+    } else if (contregra == 3) {
         nq.innerHTML = 'Respostas corretas resultam em pontuação, enquanto respostas incorretas não resultam em penalidades.'
-    } else if (contregra == 4){
+    } else if (contregra == 4) {
         nq.innerHTML = 'Vamos lá?'
-        
+
     } else if (contregra == 5) {
         nq.innerHTML = 'Sobre qual assunto você deseja estudar? '
         opc.style.display = 'block'

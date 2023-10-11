@@ -30,7 +30,7 @@ body {
     margin: 0;
 }
 
-.ranking {
+.ranking { 
     max-width: 750px;
     margin: 10px auto;
     position: relative;
@@ -85,7 +85,7 @@ body {
     margin-right: 15px;
     background-color: var(--main-neutro);
 }
-.progresso {
+.progresso, .myprogresso {
     background-color: var(--main-cor-texto);
     width: 0;
     height: 100%;
