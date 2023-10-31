@@ -40,6 +40,16 @@ if (!isset($_SESSION["user_id"])) {
         form button {
             background-color: #1982C4;
         }
+        @media (max-width: 425px) {
+            main img {
+                width: 300px;
+                
+            }
+            main div {
+            margin: 20px;
+        }
+            
+        }
     </style>
 </head>
 

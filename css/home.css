@@ -1,23 +1,32 @@
-
 /* Corpo */
+body {
+    width: 100%;
+    height: 100vh;
+}
 main {
-    margin: 0 100px;
     display: flex;
     justify-content: space-between;
-
+    width: 100% ;
 }
-.grid2, .grid3, .grid4, .grid5 {
+.grid-left {
+    margin: 0 0 0 100px;
+}
+.grid2,
+.grid3,
+.grid4,
+.grid5 {
     background-color: var(--main-elementos);
     width: 600px;
     height: 150px;
     margin: 30px;
-    border-radius: 12px;    
+    border-radius: 12px;
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
-.icons, .icons2 {
+.icons,
+.icons2 {
     margin: 0 20px;
-} 
+}
 .gridp {
     margin-left: 20px;
     font-size: 3rem;
@@ -25,15 +34,13 @@ main {
 }
 
 .sessao2 {
-    width: 40%;
     position: relative;
     display: flex;
-    /* margin: auto; */
     align-items: center;
 }
-#carlao {
+#carlao { 
     position: absolute;
-    right: 10px;
+    right:  200px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -43,3 +50,67 @@ main {
     right: -100px;
 }
 
+@media (max-width: 1024px) {
+    #carlao {
+        top: 50%;
+        transform: translateY(-100%);
+        right: 85px;
+    }
+    .grid2 {
+        margin-top: 140px;
+    }
+}
+
+@media (max-width: 780px) {
+    #carlao {
+        width: 300px;
+        top: 50%;
+        transform: translateY(-200%);
+        right: 0;
+        margin-top: 20px;
+    }
+    main {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .grid-left {
+        margin: 0 auto;
+    }
+    .grid2,
+    .grid3,
+    .grid4,
+    .grid5 {
+        background-color: var(--main-elementos);
+        min-width: 280px;
+        max-width: 300px;
+        height: 130px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+    }
+    .grid2 {
+        margin-top: 120px;
+    }
+    .gridp {
+        font-size: 1.5em;
+    }
+    #carlao {
+        width: 200px;
+        top: 50%;
+        transform: translateY(-250%);
+        right: 10px;
+        margin-top: 20px;
+    }
+    main {
+        margin: 0;
+    }
+    section {
+        margin-top: 100px;
+    }
+    .icons, .icons2 {
+        width: 70px;
+    }
+}

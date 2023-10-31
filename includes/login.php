@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
     // print('funfa');
     include_once("conexao.php");
@@ -16,7 +17,6 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
         if ($resultado_sql) {
             $dados_usuario = mysqli_fetch_assoc($resultado_sql);
             if (isset($dados_usuario)) {
-                session_start();
                 $_SESSION['user_id'] = $dados_usuario["user_id"];
                 $_SESSION['user_name'] = $dados_usuario["user_name"];
                 $_SESSION['user_email'] = $dados_usuario["user_email"];
@@ -58,7 +58,6 @@ if (isset($_POST['email_entrar'])) {
     if ($resultado_sql) {
         $dados_usuario = mysqli_fetch_assoc($resultado_sql);
         if (isset($dados_usuario)) {
-            session_start();
             $_SESSION['user_id'] = $dados_usuario["user_id"];
             $_SESSION['user_name'] = $dados_usuario["user_name"];
             $_SESSION['user_email'] = $dados_usuario["user_email"];
@@ -70,7 +69,7 @@ if (isset($_POST['email_entrar'])) {
             //     $_SESSION['foto_perfil'] = false;
             // }
 
-            header("Location:home.php");
+            print "<script>location.href = './home.php'</script>";
         } else {
             print "<script> alert('Email e senha incorreto'); </script>";
         }

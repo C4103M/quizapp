@@ -28,7 +28,7 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
     include('./includes/header.php')
     ?>
     <main>
-        <section>
+        <section class="grid-left">
             <div class="grid2" id="e1" <?php print $event1; ?>>
                 <figure>
                     <img src="img/brain.svg" alt="brain" class="icons" <?php print $event1; ?>>

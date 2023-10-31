@@ -13,6 +13,7 @@ function entrar(){
     span1.style.animation = 'span1 1s normal forwards';
     span2.style.animation = 'span2 1s normal forwards';
     divwelcome.style.animation = 'welcome 1s normal forwards';
+    cliqueaqui.style.display = 'none';
 
     setInterval(troca1(), 500)
 }
@@ -20,6 +21,7 @@ function cadastrar() {
     span1.style.animation = 'span1 1s normal forwards';
     span2.style.animation = 'span2 1s normal forwards';
     divwelcome.style.animation = 'welcome 1s normal forwards';
+    cliqueaqui.style.display = 'none';
 
     setInterval(troca2(),500)
 }

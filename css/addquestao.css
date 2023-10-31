@@ -17,8 +17,6 @@
     --main-border: #000;
     --main-elementos: #363636;
     --main-neutro: #d9d9d9;
-
-
 }
 
 main {
@@ -85,4 +83,12 @@ textarea {
 
 select {
     width: 180px;
+}
+@media (max-width:425px) {
+   form {
+    width: 310px;
+   } 
+   main {
+    margin-top: 50px;
+   }
 }

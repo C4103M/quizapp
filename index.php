@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if (isset($_GET["erro"])) {
     $erro = $_GET["erro"];
     if ($erro == 1) {
@@ -19,25 +21,38 @@ if (isset($_GET["erro"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/form.css">
+    <!-- <link rel="stylesheet" href="./css/header.css"> -->
     <title>Login</title>
 </head>
 
 <body>
+    <header>
+        <figure class="poweroff">
+            <label class="switch">
+                <input type="checkbox" id="check" onchange="changeMode()">
+                <span class="slider">
+                    <img src="./img/sun.svg" alt="sun" class="sun">
+                    <img src="./img/moon.svg" alt="" class="moon">
+                </span>
+            </label>
+        </figure>
+    </header>
     <main>
         <section class="divwelcome">
             <section class="boasvindas">
                 <div class="inicialpage">
-
-                    <i class="imgbrain"><img src="./img/brain2.svg" alt=""></i>
-                    <p class="txtboasvindas">
-                    Bem-vindo ao nosso emocionante Quiz de Informática! Aqui, exploraremos desde programação até cibersegurança. 
-                    Esteja preparado para desafios que expandirão seu domínio sobre o universo digital. 
-                    Vamos começar essa jornada de conhecimento juntos! <button class="cliqueaqui" onclick="cadastrar()">Clique aqui</button> para criar sua contagratuitamente!
-                    </p>
+                    <i><img src="./img/carlao2.png" class="carlaologin" alt=""></i>
+                    <div class="div-boasvindas">
+                        <p class="pboasvindas">
+                            Bem-vindo ao nosso emocionante Quiz de Informática!
+                    </div>
+                </div>
             </section>
-            <div class="butonAnimar">
-                <button class="btnlogin" type="submit" onclick="entrar()">Entrar</button>
-            </div>
+            <div class="butonAnimar2">
+                <div class="butonAnimar">
+                    <button class="btnlogin" type="submit" onclick="entrar()">Entrar</button>
+                    <button class="cliqueaqui" type="submit" onclick="cadastrar()">Cadastrar</button>
+                </div>
             </div>
 
             <div class="entrar">
@@ -55,7 +70,7 @@ if (isset($_GET["erro"])) {
                         </div>
 
                         <div class="item">
-                            <p class="cadparagrafo">Não possui uma conta?<br> <button class="cliqueaqui" onclick="troca2()">Cadastre-se</button></p>
+                            <p class="cadparagrafo">Não possui uma conta?<br> <button class="btn-none" onclick="troca2()">Cadastre-se</button></p>
                             <button type="submit" id="ButonLogin" class="btn-enviar">Entrar</button>
                         </div>
                     </form>
@@ -80,8 +95,8 @@ if (isset($_GET["erro"])) {
                             <input type="text" placeholder="Confirmar Senha:">
                         </div>
                         <div class="item">
-                            <p class="cadparagrafo">Já possui conta?<br> <button class="cliqueaqui" onclick="troca1()">Entrar</button></p>
-                            <button type="submit" id="ButonLogin" class="btnlogin">Entrar</button>
+                            <p class="cadparagrafo">Já possui conta?<br> <button class="btn-none" onclick="troca1()">Entrar</button></p>
+                            <button type="submit" id="ButonLogin" class="btnlogin">Cadastrar</button>
                         </div>
                     </form>
                 </div>
@@ -91,7 +106,7 @@ if (isset($_GET["erro"])) {
             <span class="span1">Quiz</span><br>
             <span class="span2">Info</span>
         </div>
-
+ 
 
 
 
@@ -104,10 +119,10 @@ if (isset($_GET["erro"])) {
 
 
 
-
     <?php
     include('includes/login.php');
     ?>
+    <script src="./js/darkmode.js"></script>
     <script src="./js/login.js"></script>
 </body>
 

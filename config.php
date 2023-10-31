@@ -50,7 +50,7 @@ if (!isset($_SESSION["user_id"])) {
             <img src="img/delete.svg" alt="" class="icons">
             <img src="img/dark-mode/delete.svg" alt="" class="icons2">
             <p>Deletar conta</p>
-        </div>
+        </div> 
 
     </main>
     <script>
@@ -67,7 +67,7 @@ if (!isset($_SESSION["user_id"])) {
         print "<script> divAdmin.style.display = 'flex' </script>";
     } else {
         print "<script> divAdmin.style.display = 'none' </script>";
-
+ 
     }
 
 

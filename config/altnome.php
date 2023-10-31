@@ -16,6 +16,8 @@ if (!isset($_SESSION["user_id"])) {
     <title>Document</title>
     <style>
         body {
+            width: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
         }
@@ -39,6 +41,16 @@ if (!isset($_SESSION["user_id"])) {
 
         form button {
             background-color: #1982C4;
+        }
+        @media (max-width: 425px) {
+            main img {
+                width: 300px;
+                
+            }
+            main div {
+            margin: 20px;
+        }
+            
         }
     </style>
 </head>

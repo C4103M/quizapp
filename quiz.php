@@ -26,11 +26,13 @@ if (!isset($_SESSION["user_id"])) {
     <main>
         <section>
             <figure class="carlaobranco">
-                <img src="./img/carlaoembranco.png" alt="">
+                <img src="./img/carlaoembranco.png" id="carlao" alt="">
                 <div class="p-pergunta">
                     <div class="divpergunta">
-                        <p><span class="nq">Você será apresentado a uma série de questões de multipla escolha.
-                            </span><span class="enunciado"></span></p><br>
+                        <p>
+                            <span class="nq">Você será apresentado a uma série de questões de multipla escolha.</span><span class="enunciado"></span>
+                        </p>
+                        <br>
                     </div>
                 </div>
             </figure>
@@ -63,7 +65,7 @@ if (!isset($_SESSION["user_id"])) {
             </div>
             <div class="opc">
                 <figure class="balao2">
-                    <img src="./img/balao2.svg" alt="">
+                    <img src="./img/balao2.svg" alt="" class="balon">
                 </figure>
                 <form action="">
                     <div class="opc1">
@@ -81,6 +83,10 @@ if (!isset($_SESSION["user_id"])) {
                     <div class="opc1">
                         <input type="checkbox" name="check4" id="check4" value="sistemas_operacionais">
                         <label for="check4">Sistemas Operacionais</label>
+                    </div>
+                    <div class="opc1">
+                        <input type="checkbox" name="check5" id="check5" value="estilizacao">
+                        <label for="check5">Estilização</label>
                     </div>
                 </form>
             </div>
@@ -100,4 +106,4 @@ if (!isset($_SESSION["user_id"])) {
     <script src="js/img.js"></script>
 </body>
 
-</html>
+</html> 

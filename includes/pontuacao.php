@@ -57,7 +57,7 @@ if ($resultado) {
                                 var varmyprogresso = document.querySelector('.myprogresso');
                                 var prog = calcularProgressoXP({$user_xp[$id]}); 
                                 varmyprogresso.style.width = prog.progresso + '%';
-
+ 
                                 var imgphp = '{$user_image[$id]}';
                                 imgphp = imgphp.replace(/^\.\.\//, '');
                                 var fotoPerfil = document.querySelector('#fotoPerfil');

@@ -51,8 +51,9 @@ const iniciar = async () => {
     let checkbox2 = document.getElementById('check2');
     let checkbox3 = document.getElementById('check3');
     let checkbox4 = document.getElementById('check4');
+    let checkbox5 = document.getElementById('check5');
 
-    if (checkbox1.checked  || checkbox2.checked || checkbox3.checked || checkbox4.checked) {
+    if (checkbox1.checked  || checkbox2.checked || checkbox3.checked || checkbox4.checked || checkbox5.checked) {
 
         const questaoSorteada = await sortear();
 

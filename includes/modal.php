@@ -36,6 +36,16 @@
     .formperfil {
         text-align: center;
     }
+    @media (max-width: 425px) {
+        dialog {
+            width: 300px;
+            height: 400px;
+        }
+        .ftperfilmodal {
+            width: 100px;
+            height: 100px;
+        }
+    }
 </style>
 
 <dialog>
