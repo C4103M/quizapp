@@ -35,3 +35,10 @@
     </figure>
 
 </header>
+<script>
+    let logout = document.querySelector('.div-poweroff');
+
+    logout.addEventListener('click', () =>{
+        window.location.href = "./config/logout.php";
+    })
+</script>
