@@ -26,17 +26,6 @@ if (isset($_GET["erro"])) {
 </head>
 
 <body>
-    <header>
-        <figure class="poweroff">
-            <label class="switch">
-                <input type="checkbox" id="check" onchange="changeMode()">
-                <span class="slider">
-                    <img src="./img/sun.svg" alt="sun" class="sun">
-                    <img src="./img/moon.svg" alt="" class="moon">
-                </span>
-            </label>
-        </figure>
-    </header>
     <main>
         <section class="divwelcome">
             <section class="boasvindas">
