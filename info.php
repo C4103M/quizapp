@@ -10,6 +10,7 @@ if (!isset($_COOKIE["user_id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/info.css">
+    <link rel="icon" href="./img/brain.svg">
     <title>INFO</title>
 </head>
 

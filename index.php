@@ -28,6 +28,7 @@ if (isset($_GET["erro"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" crossorigin="use-credentials" href="manifest.json"/>  
     <link rel="stylesheet" href="./css/form.css">
+    <link rel="icon" href="./img/brain.svg">
     <!-- <link rel="stylesheet" href="./css/header.css"> -->
     <title>Login</title>
       <script>
@@ -60,7 +61,7 @@ if (isset($_GET["erro"])) {
                 <div class="form1">
 
                     <span class="t1">Login</span>
-                    <form action="" id="formLogin" method="post">
+                    <form action="" class="formLogin" method="post">
                         <div class="item">
                             <i><img src="./img/email.svg" alt=""></i>
                             <input type="email" placeholder="Email:" name="email_entrar" required>
@@ -78,7 +79,7 @@ if (isset($_GET["erro"])) {
                 </div>
                 <div class="form2">
                     <span class="t1">Cadastrar</span>
-                    <form action="" id="formLogin" method="post">
+                    <form action="" class="formLogin" method="post">
                         <div class="item">
                             <i><img src="./img/altername.svg" alt=""></i>
                             <input type="text" placeholder="Nome de Usuário:" name="nome" required>
@@ -94,6 +95,10 @@ if (isset($_GET["erro"])) {
                         <div class="item">
                             <i><img src="./img/cadeado.svg" alt=""></i>
                             <input type="text" placeholder="Confirmar Senha:">
+                        </div>
+                        <div class="inp-termos">
+                            <input type="checkbox">
+                            <p>Eu li e aceito todos os <a href="./termos-de-uso.html">termos de uso</a> e <a href="./politica-de-privacidade.html">políticas de privacidade</a></p>
                         </div>
                         <div class="item">
                             <p class="cadparagrafo">Já possui conta?<br> <button class="btn-none" onclick="troca1()">Entrar</button></p>

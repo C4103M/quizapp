@@ -12,6 +12,7 @@ if (!isset($_COOKIE["user_id"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/placar.css">
     <script src="js/pontua.js"></script>
+    <link rel="icon" href="./img/brain.svg">
     <title>Placar</title>
 </head>
 

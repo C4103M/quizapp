@@ -119,7 +119,7 @@ body {
     justify-content: center;
 }
 
-#formLogin {
+.formLogin {
     width: 80%;
     position: relative;
     top: 30%;
@@ -134,7 +134,7 @@ body {
     color: var(--main-neutro);
 }
 
-#formLogin > div > input {
+.formLogin > .item > input {
     stroke-width: 2px;
     stroke: var(--main-cor-texto);
     outline: none;
@@ -143,14 +143,14 @@ body {
     background: transparent;
     width: 90%;
 }
-#formLogin > div {
+.formLogin > div {
     display: flex;
     justify-content: space-around;
 }
 .item {
     /* position: relative; */
     /* left: 25px; */
-    margin-bottom: 65px;
+    margin-bottom: 50px;
 }
 .item > i > img {
     width: 20px;
@@ -330,6 +330,21 @@ main {
 }
 .butonAnimar {
     width: 70%;
+}
+
+.inp-termos  {
+    position: relative;
+    top: -35px;
+    margin: 10px 0;
+}
+.inp-termos p{
+    display: block;
+    text-align: justify;
+}
+.inp-termos > input {
+    width: 20px;
+    margin-left: 3px;
+    margin-right: 23px;
 }
 @keyframes span1 {
     from {
