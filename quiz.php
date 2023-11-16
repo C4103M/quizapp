@@ -1,8 +1,8 @@
 <?php
 session_start();
-$nome = $_SESSION['user_name'];
-$img = $_SESSION['foto_perfil'];
-if (!isset($_SESSION["user_id"])) {
+$nome = $_COOKIE['user_name'];
+$img = $_COOKIE['foto_perfil'];
+if (!isset($_COOKIE["user_id"])) {
     header("Location:index.php?erro=2");
 }
 ?>
@@ -95,7 +95,7 @@ if (!isset($_SESSION["user_id"])) {
         </section>
     </main>
     <?php
-    $exp = $_SESSION['user_xp'];
+    $exp = $_COOKIE['user_xp'];
     print "<p id='exphp' style='display:none'>$exp</p>";
     print "<p id='imgphp' style='display:none;'>$img</p>";
     ?>

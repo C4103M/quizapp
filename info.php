@@ -1,7 +1,6 @@
 <?php
-session_start();
-$nome = $_SESSION['user_name'];
-if (!isset($_SESSION["user_id"])) {
+$nome = $_COOKIE['user_name'];
+if (!isset($_COOKIE["user_id"])) {
     header("Location:index.php?erro=2");
 }
 ?>

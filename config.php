@@ -1,8 +1,8 @@
 <?php
 session_start();
-$nome = $_SESSION['user_name'];
-$img = $_SESSION['foto_perfil'];
-if (!isset($_SESSION["user_id"])) {
+$nome = $_COOKIE['user_name'];
+$img = $_COOKIE['foto_perfil'];
+if (!isset($_COOKIE["user_id"])) {
     header("Location:index.php?erro=2");
 }
 ?>
@@ -41,6 +41,11 @@ if (!isset($_SESSION["user_id"])) {
             <img src="img/dark-mode/alterfoto.svg" alt="" class="icons2">
             <p>Alterar Foto de perfil</p>
         </div>
+        <div class="item" id="item7" onmousedown="clickCard(7)" onmouseup="soltCard(7)" onmouseenter="enterMouse(7)"onmouseout="sairCard(7)">
+            <img src="img/alterfoto.svg" alt="" class="icons">
+            <img src="img/dark-mode/alterfoto.svg" alt="" class="icons2">
+            <p>Sair</p>
+        </div>
         <div class="item admin" id="item6" onmousedown="clickCard(6)" onmouseup="soltCard(6)" onmouseenter="enterMouse(6)" onmouseout="sairCard(6)">
             <img src="img/more.svg" alt="" class="icons">
             <img src="img/more.svg" alt="" class="icons2">
@@ -58,11 +63,11 @@ if (!isset($_SESSION["user_id"])) {
     </script>
     <?php
     include('includes/modal.php');
-    $exp = $_SESSION['user_xp'];
+    $exp = $_COOKIE['user_xp'];
     print "<p id='exphp' style='display:none'>$exp</p>";
     print "<p id='imgphp' style='display:none;'>$img</p>";
 
-    $privilegios = $_SESSION['permission'];
+    $privilegios = $_COOKIE['permission'];
     if ($privilegios == 'admin') {
         print "<script> divAdmin.style.display = 'flex' </script>";
     } else {

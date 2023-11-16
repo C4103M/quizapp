@@ -1,9 +1,8 @@
 <?php
-session_start();
-$nome = $_SESSION['user_name'];
-$id = $_SESSION['user_id'];
-$img = $_SESSION['foto_perfil'];
-if (!isset($_SESSION["user_id"])) {
+$nome = $_COOKIE['user_name'];
+$id = $_COOKIE['user_id'];
+$img = $_COOKIE['foto_perfil'];
+if (!isset($_COOKIE["user_id"])) {
     header("Location:index.php?erro=2");
 }
 ?>
@@ -84,8 +83,8 @@ if (!isset($_SESSION["user_id"])) {
                 if ($dados_usuario['user_password'] == $senha) {
                     $resultado = mysqli_query($con, $sql2);
                     if($resultado) {
-                        $_SESSION['user_name'] = $novonome;
-                        $nome = $_SESSION['user_name'];
+                        $_COOKIE['user_name'] = $novonome;
+                        $nome = $_COOKIE['user_name'];
                         print "<script>alert('Nome alterado com sucesso')</script>";
                     }
                 }

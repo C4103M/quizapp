@@ -1,7 +1,7 @@
 <?php
 // session_start(); 
 
-$id = $_SESSION['user_id'];
+$id = $_COOKIE['user_id'];
 include_once('includes/conexao.php');
 
 $con = conecta_mysql();

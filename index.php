@@ -1,5 +1,11 @@
 <?php
-session_start();
+
+ob_start();
+
+if (isset($_COOKIE["user_id"])) {
+    
+    header("Location:./home.php");
+}
 
 if (isset($_GET["erro"])) {
     $erro = $_GET["erro"];
@@ -20,9 +26,15 @@ if (isset($_GET["erro"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" crossorigin="use-credentials" href="manifest.json"/>  
     <link rel="stylesheet" href="./css/form.css">
     <!-- <link rel="stylesheet" href="./css/header.css"> -->
     <title>Login</title>
+      <script>
+		if (typeof navigator.serviceWorker !== 'undefined') {
+			navigator.serviceWorker.register('pwabuilder-sw.js')
+		}
+    </script>
 </head>
 
 <body>

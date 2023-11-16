@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
     // print('funfa');
     include_once("conexao.php");
@@ -17,18 +16,15 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
         if ($resultado_sql) {
             $dados_usuario = mysqli_fetch_assoc($resultado_sql);
             if (isset($dados_usuario)) {
-                $_SESSION['user_id'] = $dados_usuario["user_id"];
-                $_SESSION['user_name'] = $dados_usuario["user_name"];
-                $_SESSION['user_email'] = $dados_usuario["user_email"];
-                $_SESSION['user_xp'] = $dados_usuario["user_xp"];
-                $_SESSION['foto_perfil'] = $dados_usuario["img"];
-                $_SESSION['permission'] = $dados_usuario["permission"];
+                setcookie("user_id", $dados_usuario["user_id"], time() + 3600, "/");
+                setcookie("user_name", $dados_usuario["user_name"], time() + 3600, "/");
+                setcookie("user_email", $dados_usuario["user_email"], time() + 3600, "/");
+                setcookie("user_xp", $dados_usuario["user_xp"], time() + 3600, "/");
+                setcookie("foto_perfil", $dados_usuario["img"], time() + 3600, "/");
+                setcookie("permission", $dados_usuario["permission"], time() + 3600, "/");
 
-                // if($dados_usuario["img"] == ''){
-                //     $_SESSION['foto_perfil'] = false;
-                // }
-
-                header("Location:home.php");
+                // Redireciona para a página home
+                header("Location: home.php");
             } else {
                 print "<script> alert('Email e senha incorreto'); </script>";
             }
@@ -58,22 +54,33 @@ if (isset($_POST['email_entrar'])) {
     if ($resultado_sql) {
         $dados_usuario = mysqli_fetch_assoc($resultado_sql);
         if (isset($dados_usuario)) {
-            $_SESSION['user_id'] = $dados_usuario["user_id"];
-            $_SESSION['user_name'] = $dados_usuario["user_name"];
-            $_SESSION['user_email'] = $dados_usuario["user_email"];
-            $_SESSION['user_xp'] = $dados_usuario["user_xp"];
-            $_SESSION['foto_perfil'] = $dados_usuario["img"];
-            $_SESSION['permission'] = $dados_usuario["permission"];
+            // $_COOKIE['user_id'] = $dados_usuario["user_id"];
+            // $_COOKIE['user_name'] = $dados_usuario["user_name"];
+            // $_COOKIE['user_email'] = $dados_usuario["user_email"];
+            // $_COOKIE['user_xp'] = $dados_usuario["user_xp"];
+            // $_COOKIE['foto_perfil'] = $dados_usuario["img"];
+            // $_COOKIE['permission'] = $dados_usuario["permission"];
+            // print_r($_COOKIE);
+            // // if($dados_usuario["img"] == ''){
+            // //     $_SESSION['foto_perfil'] = false;
+            // // }
 
-            // if($dados_usuario["img"] == ''){
-            //     $_SESSION['foto_perfil'] = false;
-            // }
+            // // print "<script>location.href = './home.php'</script>";
+            setcookie("user_id", $dados_usuario["user_id"], time() + 3600, "/");
+            setcookie("user_name", $dados_usuario["user_name"], time() + 3600, "/");
+            setcookie("user_email", $dados_usuario["user_email"], time() + 3600, "/");
+            setcookie("user_xp", $dados_usuario["user_xp"], time() + 3600, "/");
+            setcookie("foto_perfil", $dados_usuario["img"], time() + 3600, "/");
+            setcookie("permission", $dados_usuario["permission"], time() + 3600, "/");
 
-            print "<script>location.href = './home.php'</script>";
+            // Redireciona para a página home
+            header("Location: home.php");
+            exit(); // Certifique-se de sair do script após o redirecionamento
         } else {
             print "<script> alert('Email e senha incorreto'); </script>";
         }
     } else {
         print "<script> alert('Email e senha incorreto'); </script>";
     }
+    ob_end_flush();
 }
