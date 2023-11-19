@@ -1,6 +1,10 @@
 <?php
 session_set_cookie_params(['lifetime' => (3*(24*(60*(60)))), 'httponly' => true]);
 session_start();
+
+if (isset($_SESSION['logado']) and $_SESSION['logado']) {
+    header("Location:./home.php");
+}
 if (isset($_GET["erro"])) {
     $erro = $_GET["erro"];
     if ($erro == 1) {
