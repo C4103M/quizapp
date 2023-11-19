@@ -1,5 +1,6 @@
-<?php
+<?php 
 if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
+
     // print('funfa');
     include_once("conexao.php");
     $nome = $_POST["nome"];
@@ -10,18 +11,19 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
     $sql = "INSERT INTO usuarioS (user_name,user_email,user_password) VALUES ('$nome','$email','$senha')";
     if (mysqli_query($con, $sql)) {
         $sql2 = "SELECT * FROM usuarios
-    WHERE user_email = '$email_entrar'
-    AND user_password = '$senha_entrar'";
+    WHERE user_email = '$email'
+    AND user_password = '$senha'";
         $resultado_sql = mysqli_query($con, $sql2);
         if ($resultado_sql) {
             $dados_usuario = mysqli_fetch_assoc($resultado_sql);
             if (isset($dados_usuario)) {
-                setcookie("user_id", $dados_usuario["user_id"], time() + 3600, "/");
-                setcookie("user_name", $dados_usuario["user_name"], time() + 3600, "/");
-                setcookie("user_email", $dados_usuario["user_email"], time() + 3600, "/");
-                setcookie("user_xp", $dados_usuario["user_xp"], time() + 3600, "/");
-                setcookie("foto_perfil", $dados_usuario["img"], time() + 3600, "/");
-                setcookie("permission", $dados_usuario["permission"], time() + 3600, "/");
+                $_SESSION['user_id'] = $dados_usuario["user_id"];
+                $_SESSION['user_name'] = $dados_usuario["user_name"];
+                $_SESSION['user_email'] = $dados_usuario["user_email"];
+                $_SESSION['user_xp'] = $dados_usuario["user_xp"];
+                $_SESSION['foto_perfil'] = $dados_usuario["img"];
+                $_SESSION['permission'] = $dados_usuario["permission"];
+                $_SESSION['logado'] = true;
 
                 // Redireciona para a página home
                 header("Location: home.php");
@@ -41,6 +43,7 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
 				</script>";
     }
 }
+
 if (isset($_POST['email_entrar'])) {
     $email_entrar = $_POST['email_entrar'];
     $senha_entrar = $_POST['senha_entrar'];
@@ -54,27 +57,17 @@ if (isset($_POST['email_entrar'])) {
     if ($resultado_sql) {
         $dados_usuario = mysqli_fetch_assoc($resultado_sql);
         if (isset($dados_usuario)) {
-            // $_COOKIE['user_id'] = $dados_usuario["user_id"];
-            // $_COOKIE['user_name'] = $dados_usuario["user_name"];
-            // $_COOKIE['user_email'] = $dados_usuario["user_email"];
-            // $_COOKIE['user_xp'] = $dados_usuario["user_xp"];
-            // $_COOKIE['foto_perfil'] = $dados_usuario["img"];
-            // $_COOKIE['permission'] = $dados_usuario["permission"];
-            // print_r($_COOKIE);
-            // // if($dados_usuario["img"] == ''){
-            // //     $_SESSION['foto_perfil'] = false;
-            // // }
+            $_SESSION['user_id'] = $dados_usuario["user_id"];
+            $_SESSION['user_name'] = $dados_usuario["user_name"];
+            $_SESSION['user_email'] = $dados_usuario["user_email"];
+            $_SESSION['user_xp'] = $dados_usuario["user_xp"];
+            $_SESSION['foto_perfil'] = $dados_usuario["img"];
+            $_SESSION['permission'] = $dados_usuario["permission"];
+            $_SESSION['logado'] = true;
 
-            // // print "<script>location.href = './home.php'</script>";
-            setcookie("user_id", $dados_usuario["user_id"], time() + 3600, "/");
-            setcookie("user_name", $dados_usuario["user_name"], time() + 3600, "/");
-            setcookie("user_email", $dados_usuario["user_email"], time() + 3600, "/");
-            setcookie("user_xp", $dados_usuario["user_xp"], time() + 3600, "/");
-            setcookie("foto_perfil", $dados_usuario["img"], time() + 3600, "/");
-            setcookie("permission", $dados_usuario["permission"], time() + 3600, "/");
 
             // Redireciona para a página home
-            header("Location: home.php");
+            print "<script>window.location.href= 'home.php';</script>";
             exit(); // Certifique-se de sair do script após o redirecionamento
         } else {
             print "<script> alert('Email e senha incorreto'); </script>";
@@ -82,5 +75,4 @@ if (isset($_POST['email_entrar'])) {
     } else {
         print "<script> alert('Email e senha incorreto'); </script>";
     }
-    ob_end_flush();
 }

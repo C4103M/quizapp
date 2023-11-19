@@ -1,13 +1,11 @@
 <?php
-$nome = isset($_COOKIE['user_name']) ? $_COOKIE['user_name'] : '';
-$img = isset($_COOKIE['foto_perfil']) ? $_COOKIE['foto_perfil'] : '';
-$id = isset($_COOKIE['user_id']) ? $_COOKIE['user_id'] : '';
-
-// Verifica se o cookie "user_id" está definido
-// if (!isset($_COOKIE["user_id"])) {
-//     header("Location: index.php?erro=2");
-//     exit(); // Certifique-se de sair do script após o redirecionamento
-// }
+session_start();
+$nome = $_SESSION['user_name'];
+$img = $_SESSION['foto_perfil'];
+$id = $_SESSION['user_id'];
+if (!isset($_SESSION["logado"])) {
+    header("Location:index.php?erro=2");
+}
 $event1 = 'onmousedown="clickCard(1)" onmouseup="soltCard(1)" onmouseenter="enterMouse(1)" onmouseout="sairCard(1)"';
 $event2 = 'onmousedown="clickCard(2)" onmouseup="soltCard(2)" onmouseenter="enterMouse(2)" onmouseout="sairCard(2)"';
 $event3 = 'onmousedown="clickCard(3)" onmouseup="soltCard(3)" onmouseenter="enterMouse(3)" onmouseout="sairCard(3)"';
@@ -72,7 +70,7 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
 
     <?php
     include('includes/modal.php');
-    $exp = $_COOKIE['user_xp'];
+    $exp = $_SESSION['user_xp'];
     print "<p id='exphp' style='display:none'>$exp</p>";
     print "<p id='imgphp' style='display:none;'>$img</p>";
     ?>

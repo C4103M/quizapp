@@ -105,7 +105,7 @@ if (isset($_POST["enviar"])) {
             if ($resultado) {
                 echo "<script>alert('Imagem adicionada')</script>";
                 echo "<script>window.location = 'home.php';</script>";
-                $_SESSION['foto_perfil'] = $destino;
+                $_COOKIE['foto_perfil'] = $destino;
                 exit;
             } else {
                 echo "<script>alert('Imagem não adicionada')</script>";

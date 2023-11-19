@@ -1,17 +1,10 @@
 <?php
-
-ob_start();
-
-if (isset($_COOKIE["user_id"])) {
-    
-    header("Location:./home.php");
-}
-
+session_set_cookie_params(['lifetime' => (3*(24*(60*(60)))), 'httponly' => true]);
+session_start();
 if (isset($_GET["erro"])) {
     $erro = $_GET["erro"];
     if ($erro == 1) {
         echo "<script> alert('Faça o login novamente!'); </script>";
-        print "";
     }
     if ($erro == 2) {
         echo "<script> alert('Faça o login novamente!'); </script>";
@@ -94,10 +87,10 @@ if (isset($_GET["erro"])) {
                         </div>
                         <div class="item">
                             <i><img src="./img/cadeado.svg" alt=""></i>
-                            <input type="text" placeholder="Confirmar Senha:">
+                            <input type="password" placeholder="Confirmar Senha:">
                         </div>
                         <div class="inp-termos">
-                            <input type="checkbox">
+                            <input type="checkbox" name="meucheckbox" required>
                             <p>Eu li e aceito todos os <a href="./termos-de-uso.html">termos de uso</a> e <a href="./politica-de-privacidade.html">políticas de privacidade</a></p>
                         </div>
                         <div class="item">
@@ -117,14 +110,6 @@ if (isset($_GET["erro"])) {
 
 
     </main>
-
-
-
-
-
-
-
-
     <?php
     include('includes/login.php');
     ?>

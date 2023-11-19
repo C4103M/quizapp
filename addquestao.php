@@ -1,7 +1,8 @@
 <?php
-$nome = $_COOKIE['user_name'];
-$img = $_COOKIE['foto_perfil'];
-if (!isset($_COOKIE["user_id"]) or $_COOKIE['permission'] != 'admin') {
+session_start();
+$nome = $_SESSION['user_name'];
+$img = $_SESSION['foto_perfil'];
+if (!isset($_SESSION["logado"]) or $_SESSION['permission'] != 'admin') {   
     header("Location:index.php?erro=2");
 }
 ?>
@@ -118,7 +119,7 @@ if (!isset($_COOKIE["user_id"]) or $_COOKIE['permission'] != 'admin') {
 
         $conn->close();
     }
-    $exp = $_COOKIE['user_xp'];
+    $exp = $_SESSION['user_xp'];
     print "<p id='exphp' style='display:none'>$exp</p>";
     print "<p id='imgphp' style='display:none;'>$img</p>";
 

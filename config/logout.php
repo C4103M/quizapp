@@ -1,10 +1,13 @@
 <?php
-	setcookie("user_id", "", time() - 3600, "/");
-	setcookie("user_name", "", time() - 3600, "/");
-	setcookie("user_email", "", time() - 3600, "/");
-	setcookie("user_xp", "", time() - 3600, "/");
-	setcookie("foto_perfil", "", time() - 3600, "/");
-	setcookie("permission", "", time() - 3600, "/");
+	session_start();
+	unset($_SESSION["codigo"]);
+	unset($_SESSION["usuario"]);
+	unset($_SESSION["email"]);
+	unset($_SESSION["user_xp"]);
+	unset($_SESSION["foto_perfil"]);
+	unset($_SESSION["permission"]);
+	unset($_SESSION["logado"]);
+	header("location:../index.php");
 	
 	// Certifique-se de sair do script após a definição dos cookies de expiração
 	header("Location:../index.php");
