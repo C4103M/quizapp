@@ -84,7 +84,7 @@ textarea {
 select {
     width: 180px;
 }
-@media (max-width:425px) {
+@media (max-width:500px) {
    form {
     width: 310px;
    } 

@@ -41,7 +41,7 @@ body {
 .icons, .icons2 {
     margin: 0 20px;
 } 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     main {
         margin-top: 100px;
     }

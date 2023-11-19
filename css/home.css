@@ -74,7 +74,7 @@ main {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     .grid-left {
         margin: 0 auto;
     }

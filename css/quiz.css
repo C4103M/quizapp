@@ -170,7 +170,7 @@ main {
         width: 600px;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     #carlao {
         width: 310px;
         position: relative;
