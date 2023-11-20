@@ -32,13 +32,35 @@
         <div class="div-poweroff">
             <img src="./img/off.svg" alt="">
         </div>
+        <div class="div-seta">
+            <img src="./img/seta.svg" alt="" class="icons">
+            <img src="./img/dark-mode/seta.svg" alt="" class="icons2">
+        </div>
     </figure>
 
 </header>
 <script>
     let logout = document.querySelector('.div-poweroff');
 
-    logout.addEventListener('click', () =>{
+    let seta = document.querySelector('.div-seta');
+    seta.addEventListener('click', () => {
+        window.location.href = "./home.php";
+    })
+
+    logout.addEventListener('click', () => {
         window.location.href = "./config/logout.php";
     })
+
+    var pagina = window.location.href;
+    var nomePagina = pagina.split('/').pop();
+
+    if (nomePagina == 'home.php') {
+        seta.style.display = 'none'
+    } else {
+        seta.style.display = 'block'
+        logout.style.display = 'none'
+
+    }
+
+
 </script>

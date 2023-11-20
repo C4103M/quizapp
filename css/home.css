@@ -1,4 +1,10 @@
 /* Corpo */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;900&family=Roboto:wght@300&display=swap");
+@font-face {
+    font-family: "Pixel";
+    /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
+    src: url("../font/Cloude_Regular_Bold_1.02.otf") format("truetype");
+}
 body {
     width: 100%;
     height: 100vh;
@@ -6,7 +12,7 @@ body {
 main {
     display: flex;
     justify-content: space-between;
-    width: 100% ;
+    width: 100%;
 }
 .grid-left {
     margin: 0 0 0 100px;
@@ -38,9 +44,9 @@ main {
     display: flex;
     align-items: center;
 }
-#carlao { 
+#carlao {
     position: absolute;
-    right:  200px;
+    right: 200px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -49,8 +55,23 @@ main {
     top: -220px;
     right: -100px;
 }
+.quiz-name {
+    position: absolute;
+    z-index: -20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.quiz-name p {
+    font-size: 40rem;
+    color: var(--main-cor-texto);
+    font-family: Pixel;
+}
 
 @media (max-width: 1024px) {
+    .quiz-name {
+        display: none;
+    }
     #carlao {
         top: 50%;
         transform: translateY(-100%);
@@ -62,6 +83,9 @@ main {
 }
 
 @media (max-width: 780px) {
+    .quiz-name {
+        display: none;
+    }
     #carlao {
         width: 300px;
         top: 50%;
@@ -75,6 +99,9 @@ main {
 }
 
 @media (max-width: 500px) {
+    .quiz-name {
+        display: none;
+    }
     .grid-left {
         margin: 0 auto;
     }
@@ -110,7 +137,8 @@ main {
     section {
         margin-top: 100px;
     }
-    .icons, .icons2 {
+    .icons,
+    .icons2 {
         width: 70px;
     }
 }

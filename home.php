@@ -65,6 +65,11 @@ $event5 = 'onmousedown="clickCard(5)" onmouseup="soltCard(5)" onmouseenter="ente
                 <img src="./img/carlao.png" id="carlao" alt="">
             </figure>
         </section>
+        <section class="quiz-name">
+            <p >
+                QI+
+            </p>
+        </section>
     </main>
 
 

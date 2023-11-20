@@ -5,7 +5,7 @@
 :root {
     --main-background: #d9d9d9;
     --main-cor-texto: #222222;
-    --main-border: #222222;
+    --main-border: #222222; 
     --main-elementos: #1982C4;
     --main-neutro: #F8F8FF;
     --main-neutro2: #f8f8ff54;
@@ -117,14 +117,25 @@ header {
     color: var(--main-cor-texto);
 }
 .div-poweroff {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     background-color: #F3F3F3;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.div-poweroff img {
+    width: 60%;
+}
+
+.div-seta {
+    width: 60px;
+}
+.div-seta > img{
+    width: 100%;
+}
+
 .div-foto {
     margin: 5px;
     display: flex;
@@ -164,7 +175,7 @@ header {
     display: flex;
     align-items: center;
 }
-
+ 
 @media (max-width: 500px) {
     header {
         flex-direction: column;

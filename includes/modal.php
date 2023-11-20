@@ -1,9 +1,9 @@
 <style>
     dialog {
-        width: 600px;
-        height: 500px;
+        width: 80%;
+        height: 70%;
         margin: auto auto;
-        border-radius: 40px;
+        border-radius: 20px;
     }
 
     .ftperfilmodal {
@@ -18,7 +18,7 @@
         align-items: center;
     }
 
-    dialog>p {
+    .altFoto>p {
         text-align: center;
         margin-bottom: 10px;
     }
@@ -36,11 +36,13 @@
     .formperfil {
         text-align: center;
     }
+    .altFoto {
+        width: 50%;
+        border: 1px solid black;
+
+    }
     @media (max-width: 425px) {
-        dialog {
-            width: 300px;
-            height: 400px;
-        }
+        
         .ftperfilmodal {
             width: 100px;
             height: 100px;
@@ -49,17 +51,20 @@
 </style>
 
 <dialog>
-    <div class="ftperfilmodal" >
-        <img src="<?php print $img;?>" id="fotoPerfil" alt="profile" class="imgModal">
-    </div>
-    <p>Trocar Foto de Perfil</p>
-    <div class="formperfil">
-        <form action="" method="post" enctype="multipart/form-data">
-            <input type="file" name="arquivo" required>
-            <br><br>
-            <input type="submit" name="enviar">
-        </form>
-    </div>
+    <section class="altFoto">
+
+        <div class="ftperfilmodal" >
+            <img src="<?php print $img;?>" id="fotoPerfil" alt="profile" class="imgModal">
+        </div>
+        <p>Trocar Foto de Perfil</p>
+        <div class="formperfil">
+            <form action="" method="post" enctype="multipart/form-data">
+                <input type="file" name="arquivo" required>
+                <br><br>
+                <input type="submit" name="enviar">
+            </form>
+        </div>
+    </section>
 
     <button onclick="fecharModal()">Fechar</button>
 </dialog>
