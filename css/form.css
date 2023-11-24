@@ -3,7 +3,7 @@
 @font-face {
     font-family: "Pixel";
     /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
-    src: url("../font/Cloude_Regular_Bold_1.02.otf") format("truetype");
+    src: url("../font/fonte1/Cloude_Regular_Bold_1.02.otf") format("truetype");
 }
 
 * {
@@ -92,6 +92,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: var(--main-background);
+    font-family: Pixel;
 }
 html,
 body {

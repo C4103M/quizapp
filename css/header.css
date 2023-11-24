@@ -9,7 +9,7 @@
     padding: 0;
     font-family: Pixel;
     font-size: 2rem;
-}
+} 
 :root {
     --main-background: #d9d9d9;
     --main-cor-texto: #222222;
@@ -115,14 +115,14 @@ header {
 }
 .titulo {
     text-align: center;
-    margin: auto 15px;
+    margin: auto px;
     color: var(--main-cor-texto);
 }
 .lvl {
     color: var(--main-cor-texto);
     height: 50px;
     position: relative;
-    top: -15px;
+    top:5px;
 
 }
 .div-poweroff {
@@ -155,10 +155,7 @@ header {
     height: 100%;
     border-radius: 20px;
 }
-.div-progresso {
-    position: relative;
-    margin: auto;
-}
+
 #medalha {
     width: 24px;
 }

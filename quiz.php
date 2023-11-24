@@ -27,7 +27,7 @@ if (!isset($_SESSION["user_id"])) {
     <main>
         <section>
             <figure class="carlaobranco">
-                <img src="./img/carlaoembranco.png" id="carlao" alt="">
+                <img src="./img/carlaoembranco.gif" id="carlao" alt="">
                 <div class="p-pergunta">
                     <div class="divpergunta">
                         <p>
