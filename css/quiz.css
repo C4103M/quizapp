@@ -3,13 +3,14 @@
 @font-face {
     font-family: "Pixel";
     /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
-    src: url("../font/Cloude_Regular_Bold_1.02.otf") format("truetype");
+    src: url("../font/fonte1/Cloude_Regular_Bold_1.02.otf") format("truetype");
 }
 
 * {
     margin: 0;
     padding: 0;
     user-select: none;
+    font-family: Pixel;
 }
 :root {
     --main-background: #f8f8ff;

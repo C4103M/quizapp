@@ -12,7 +12,7 @@
                 <?php print $nome; ?>
             </div>
         </div>
-        <img src="img/medal.svg" alt="medalha" id="medalha" class="icons">
+        <img src="img/medal.svg" alt="medalha" id="medalha" >
         <img src="img/dark-mode/medal.svg" alt="medalha" id="medalha" class="icons2">
         <div class="div-progresso">
             <div class="lvl"> <span style="font-size: 0.9rem;"> Nivel</span> </div>

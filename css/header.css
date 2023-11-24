@@ -1,6 +1,14 @@
+@font-face {
+    font-family: "Pixel";
+    /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
+    src: url("../font/fonte1/Cloude_Regular_Bold_1.02.otf") format("truetype");
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Pixel;
+    font-size: 2rem;
 }
 :root {
     --main-background: #d9d9d9;
@@ -85,13 +93,10 @@ header {
 .grid1 {
     border: 3px solid var(--main-cor-texto);
     border-radius: 15px;
-    /* background-color: #F3F3F3; */
-    width: 25%;
-    min-width: 450px;
+    width: 550px;
     height: 60px;
     margin: 50px;
     display: flex;
-    justify-content: space-between;
 }
 
 .ftperfil {
@@ -115,6 +120,10 @@ header {
 }
 .lvl {
     color: var(--main-cor-texto);
+    height: 50px;
+    position: relative;
+    top: -15px;
+
 }
 .div-poweroff {
     width: 80px;
@@ -131,10 +140,13 @@ header {
 }
 
 .barra {
-    width: 15em;
-    height: 0.6rem;
+    width: 240px;
+    height: 10px;
     border-radius: 20px;
     background-color: var(--main-neutro);
+    position: relative;
+    top: -15px;
+
 
 }
 .progresso {
@@ -148,9 +160,7 @@ header {
     margin: auto;
 }
 #medalha {
-    width: 1.5rem;
-    position: relative;
-    right: -20px;
+    width: 24px;
 }
 .divsec {
     display: flex;
@@ -166,8 +176,12 @@ header {
 }
 
 @media (max-width: 500px) {
+    * {
+        font-size: 1.5rem;
+    }
     header {
         flex-direction: column;
+        padding: 0;
     }
     .poweroff {
         margin: 0;
@@ -180,7 +194,7 @@ header {
     }
     .grid1 {
         margin: 10px;
-        min-width: 300px;
+        width: 420px;
         justify-content: baseline;
     }
     .barra {
@@ -195,5 +209,17 @@ header {
     .div-progresso{
         left: -40px;
     }
+    .barra {
+        width: 180px;
+    }
 
+}
+@media (max-width: 360px) {
+    .grid1 {
+        width: 310px;
+        margin: 10px 0;
+    }
+    #medalha {
+        display: none;
+    }
 }

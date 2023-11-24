@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Pixel";
+    /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
+    src: url("../font/fonte1/Cloude_Regular_Bold_1.02.otf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Pixel;
+    font-size: 2rem;
+}
+
 /* Corpo */
 body {
     width: 100%;
