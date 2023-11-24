@@ -115,14 +115,14 @@ header {
 }
 .titulo {
     text-align: center;
-    margin: auto px;
+    margin: auto 20px;
     color: var(--main-cor-texto);
 }
 .lvl {
     color: var(--main-cor-texto);
     height: 50px;
     position: relative;
-    top:5px;
+    top:-15px;
 
 }
 .div-poweroff {
@@ -158,6 +158,7 @@ header {
 
 #medalha {
     width: 24px;
+    margin: 0 30px;
 }
 .divsec {
     display: flex;
@@ -198,7 +199,7 @@ header {
         width: 240%;
     }
     .titulo {
-        margin: auto 2px;
+        margin: auto 5px;
     }
     #medalha {
         right: 0;
@@ -209,7 +210,9 @@ header {
     .barra {
         width: 180px;
     }
-
+    .lvl {
+        top: 1px;
+    }
 }
 @media (max-width: 360px) {
     .grid1 {
