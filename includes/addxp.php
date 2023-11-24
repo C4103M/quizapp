@@ -1,6 +1,6 @@
 <?php
-include_once("conexao.php");
 session_start();
+include_once("conexao.php");
 
 $pagina = filter_input(INPUT_GET, "pagina", FILTER_SANITIZE_NUMBER_INT);
 

@@ -1,0 +1,11 @@
+{
+    "name":"quizapp/quizapp",
+    "autoload":{
+        "psr-4":{
+            "App\\":"app/"
+        }
+    },
+    "require": {
+        "google/apiclient": "^2.15"
+    }
+}

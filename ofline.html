@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./img/brain.svg">
+        <title>Sem conexão</title>
+        <style>
+            @font-face {
+                font-family: "Pixel";
+                /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
+                src: url("./font/Cloude_Regular_Bold_1.02.otf")
+                    format("truetype");
+            }
+            body {
+                background-color: #222;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 96%;
+                height: 96vh;
+            }
+            .img {
+                position: relative;
+            }
+            p {
+                position: absolute;
+                top: 0;
+                left: 130px;
+                font-family: Pixel;
+                font-size: 3em;
+            }
+            @media (max-width: 425px) {
+              img {
+				width: 300px;
+			  }
+			  p {
+				font-size: 2em;
+				top: -30px;
+				left: 50px;
+			  }
+            }
+        </style>
+		<script>
+			if (typeof navigator.serviceWorker !== 'undefined') {
+				navigator.serviceWorker.register('pwabuilder-sw.js')
+			}
+		</script>
+    </head>
+    <body>
+        <div class="img">
+            <img src="./img/carlaoembranco.png" alt="" />
+            <p>Você está sem conexão com a Internet!</p>
+        </div>
+    </body>
+</html>

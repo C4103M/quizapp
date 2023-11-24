@@ -13,6 +13,7 @@ if (!isset($_SESSION["user_id"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/brain.svg">
     <title>Uploads</title>
 </head>
 <body>    
@@ -21,7 +22,7 @@ if (!isset($_SESSION["user_id"])) {
             <input type="file" name="arquivo" >
             <br><br>
             <input type="submit" name="enviar">
-        </form>
+        </form> 
     </div>
     <?php
         if (isset($_POST["enviar"])){
