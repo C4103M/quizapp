@@ -1,11 +1,19 @@
+@font-face {
+    font-family: "Pixel";
+    /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
+    src: url("../font/fonte1/Cloude_Regular_Bold_1.02.otf") format("truetype");
+}
+
 * {
     margin: 0;
     padding: 0;
-}
+    font-family: Pixel;
+    font-size: 2rem;
+} 
 :root {
     --main-background: #d9d9d9;
     --main-cor-texto: #222222;
-    --main-border: #222222; 
+    --main-border: #222222;
     --main-elementos: #1982C4;
     --main-neutro: #F8F8FF;
     --main-neutro2: #f8f8ff54;
@@ -56,7 +64,7 @@ body {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background: #c2c2c2;
+    background: var(--main-elementos);
     border-radius: 50%;
     transition: .4s;
 }
@@ -85,15 +93,16 @@ header {
 .grid1 {
     border: 3px solid var(--main-cor-texto);
     border-radius: 15px;
-    /* background-color: #F3F3F3; */
-    width: 25%;
-    min-width: 450px;
+    width: 550px;
     height: 60px;
     margin: 50px;
     display: flex;
-    justify-content: space-between;
 }
 
+.div-medalha > img{
+    display: flex;
+
+}
 .ftperfil {
     width: 50px;
     height: 50px;
@@ -110,11 +119,15 @@ header {
 }
 .titulo {
     text-align: center;
-    margin: auto 15px;
+    margin: auto 20px;
     color: var(--main-cor-texto);
 }
 .lvl {
     color: var(--main-cor-texto);
+    height: 50px;
+    position: relative;
+    top:-15px;
+
 }
 .div-poweroff {
     width: 50px;
@@ -126,26 +139,21 @@ header {
     align-items: center;
 }
 .div-poweroff img {
-    width: 60%;
-}
-
-.div-seta {
-    width: 60px;
-}
-.div-seta > img{
     width: 100%;
 }
-
 .div-foto {
     margin: 5px;
     display: flex;
 }
 
 .barra {
-    width: 15em;
-    height: 0.6rem;
+    width: 240px;
+    height: 10px;
     border-radius: 20px;
     background-color: var(--main-neutro);
+    position: relative;
+    top: -15px;
+
 
 }
 .progresso {
@@ -154,14 +162,10 @@ header {
     height: 100%;
     border-radius: 20px;
 }
-.div-progresso {
-    position: relative;
-    margin: auto;
-}
+
 #medalha {
-    width: 1.5rem;
-    position: relative;
-    right: -20px;
+    width: 24px;
+    margin: 0 30px;
 }
 .divsec {
     display: flex;
@@ -171,14 +175,18 @@ header {
 .poweroff {
     margin: 50px;
     position: absolute;
-    right: 0px;
+    left: 0;
     display: flex;
     align-items: center;
 }
- 
+
 @media (max-width: 500px) {
+    * {
+        font-size: 1.5rem;
+    }
     header {
         flex-direction: column;
+        padding: 0;
     }
     .poweroff {
         margin: 0;
@@ -191,14 +199,14 @@ header {
     }
     .grid1 {
         margin: 10px;
-        min-width: 300px;
+        width: 400px;
         justify-content: baseline;
     }
     .barra {
         width: 240%;
     }
     .titulo {
-        margin: auto 2px;
+        margin: auto 5px;
     }
     #medalha {
         right: 0;
@@ -206,5 +214,25 @@ header {
     .div-progresso{
         left: -40px;
     }
-
+    .barra {
+        width: 180px;
+    }
+    .lvl {
+        top: 1px;
+    }
+}
+@media (max-width: 375px)  {
+    .grid1 {
+        width: 369px;
+        margin: 10px 0;
+    }
+}
+@media (max-width: 320px) {
+    .grid1 {
+        width: 310px;
+        margin: 10px 0;
+    }
+    #medalha {
+        display: none;
+    }
 }

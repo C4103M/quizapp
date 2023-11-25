@@ -3,13 +3,14 @@
 @font-face {
     font-family: "Pixel";
     /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
-    src: url("../font/Cloude_Regular_Bold_1.02.otf") format("truetype");
+    src: url("../font/fonte1/Cloude_Regular_Bold_1.02.otf") format("truetype");
 }
 
 * {
     margin: 0;
     padding: 0;
     user-select: none;
+    font-family: Pixel;
 }
 :root {
     --main-background: #f8f8ff;
@@ -92,14 +93,18 @@ main {
     top: 150px;
     z-index: -1;
 }
+#carlao {
+    width: 900px;
+}
 .p-pergunta {
+    width: 630px;
     font-size: 3rem;
     position: absolute;
     display: flex;
     align-items: center;
     top: 0px;
-    left: 110px;
-    line-height: 20px;
+    left: 118px;
+    line-height: 30px;
 }
 
 .nq {
@@ -112,21 +117,26 @@ main {
 .btn {
     position: absolute;
     right: 250px;
-    bottom: 250px;
+    bottom: 50px;
     background-color: var(--main-elementos);
     outline: none;
     border: none;
-    width: 150px;
+    width: 200px;
     height: 40px;
     border-radius: 15px;
     font-family: Pixel;
-    font-size: 3rem;
+    font-size: 1.3rem;
     line-height: 0;
 }
 #btn1 {
     display: none;
 }
-
+.btnReiniciar {
+    /* position: absolute; */
+    bottom: 30px;
+    right: 100px;
+    z-index: 10 ;
+}
 .opc1 {
     font-family: Pixel, "Arial";
     font-size: 30pt;
@@ -148,6 +158,7 @@ main {
 .opc {
     display: none;
     color: #f3f3f3;
+    line-height: 10px;
 }
  
 @media (max-width: 1024px) { 

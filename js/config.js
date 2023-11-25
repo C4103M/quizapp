@@ -1,12 +1,10 @@
 function clickCard(element){
     const card = document.getElementById(`item${element}`)
-    console.log(card);
     card.setAttribute('style', 'scale:0.9')
 }
 
 function soltCard(element){
     const card = document.getElementById(`item${element}`)
-    console.log(card);
     card.setAttribute('style', 'scale:1.0')
 
     if (element == 1){
@@ -25,6 +23,9 @@ function soltCard(element){
         location.href = "./addquestao.php"
     }
     if (element == 7){
+        changeMode();
+    }
+    if (element == 8){
         location.href = "./config/logout.php"
     }
 
@@ -33,13 +34,11 @@ function soltCard(element){
 
 function enterMouse(element) {
     const card = document.getElementById(`item${element}`)
-    console.log(card);
     card.setAttribute('style', 'scale:1.1')
 }
 
 function sairCard(element){
     const card = document.getElementById(`item${element}`)
-    console.log(card);
     card.setAttribute('style', 'scale:1.0')
     
 }

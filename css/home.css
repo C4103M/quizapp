@@ -1,10 +1,17 @@
-/* Corpo */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;900&family=Roboto:wght@300&display=swap");
 @font-face {
     font-family: "Pixel";
     /* src: url('../font/depixelhalbfett.woff') format('truetype'); */
-    src: url("../font/Cloude_Regular_Bold_1.02.otf") format("truetype");
+    src: url("../font/fonte1/Cloude_Regular_Bold_1.02.otf") format("truetype");
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Pixel;
+    font-size: 2rem;
+}
+
+/* Corpo */
 body {
     width: 100%;
     height: 100vh;
@@ -12,7 +19,7 @@ body {
 main {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100% ;
 }
 .grid-left {
     margin: 0 0 0 100px;
@@ -29,9 +36,8 @@ main {
     display: flex;
     align-items: center;
 }
-.icons,
-.icons2 {
-    margin: 0 20px;
+.icons {
+    margin: 10px 20px;
 }
 .gridp {
     margin-left: 20px;
@@ -44,64 +50,82 @@ main {
     display: flex;
     align-items: center;
 }
-#carlao {
-    position: absolute;
-    right: 200px;
-    top: 50%;
-    transform: translateY(-50%);
+#carlaoHome { 
+    width: 700px;
+    position: relative;
+    left: -100px;
+    transform: scaleX(-1);
 }
 #balao {
     position: relative;
     top: -220px;
     right: -100px;
 }
-.quiz-name {
-    position: absolute;
-    z-index: -20;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.ic-ca {
+    position: relative;
 }
-.quiz-name p {
-    font-size: 40rem;
-    color: var(--main-cor-texto);
-    font-family: Pixel;
+.benvindojovem {
+    position: absolute;
+    top: 0;
+    left: 40px;
 }
 
-@media (max-width: 1024px) {
-    .quiz-name {
-        display: none;
+@media (max-width: 1280px) {
+    
+    .ic-ca {
+        position: absolute;
+        right: 0px;
+        top: 0;
+        pointer-events: none;
+
     }
-    #carlao {
-        top: 50%;
-        transform: translateY(-100%);
-        right: 85px;
+    #carlaoHome {
+        left: -20px;
+        pointer-events: none;
+
     }
-    .grid2 {
-        margin-top: 140px;
+    .benvindojovem {
+        left: 116px;
+        pointer-events: all;
+
+    }
+    .grid-left {
+        margin-top: 110px;
     }
 }
 
 @media (max-width: 780px) {
-    .quiz-name {
-        display: none;
+    main {
+        justify-content: center;
     }
-    #carlao {
-        width: 300px;
-        top: 50%;
-        transform: translateY(-200%);
+    .sessao2 {
+        position: absolute;
+        /* top: 100px; */
+        /* left: 0; */
         right: 0;
+    }
+    .ic-ca {
+        position: absolute;
+        top: -60px;
+        right: 0;
+        pointer-events: none;
+    }
+    
+    #carlaoHome {
+        width: 500px;
         margin-top: 20px;
     }
-    main {
-        margin: 0 auto;
+    .grid-left {
+        margin: 60px 0;
+    }
+    .benvindojovem {
+        left: 0px;
+        top: 15px;
+        /* pointer-events: ; */
     }
 }
 
 @media (max-width: 500px) {
-    .quiz-name {
-        display: none;
-    }
     .grid-left {
         margin: 0 auto;
     }
@@ -124,21 +148,39 @@ main {
     .gridp {
         font-size: 1.5em;
     }
-    #carlao {
-        width: 200px;
+    .ic-ca {
+        width: 350px;
+        position: absolute;
+        top: 20px;
+        pointer-events: none;
+    }
+    #carlaoHome {
+        width: 100%;
         top: 50%;
-        transform: translateY(-250%);
-        right: 10px;
+        transform: scaleX(-1);
+        left: -40px;
         margin-top: 20px;
+    }
+    .benvindojovem {
+        left: 30px;
+        pointer-events: all;
     }
     main {
         margin: 0;
     }
-    section {
-        margin-top: 100px;
+    .grid-left {
+        margin-top: 80px;
     }
-    .icons,
-    .icons2 {
+    .icons {
         width: 70px;
+    }
+}
+@media (max-width:360px) {
+    #carlaoHome {
+        left: -25px;
+    }
+    .benvindojovem {
+        left: 40px;
+        pointer-events: all;
     }
 }

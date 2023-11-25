@@ -11,6 +11,8 @@ const lb = document.querySelector(".lb");
 const lc = document.querySelector(".lc");
 const ld = document.querySelector(".ld");
 
+
+
 const pBemVindos = document.querySelector(".inicialText")
 
 
@@ -80,7 +82,6 @@ const iniciar = async () => {
 }
 function validar() {
     const opcaoSelecionada = document.querySelector('input[name="resposta"]:checked').value;
-    console.log(opcaoSelecionada);
     if (opcaoSelecionada == questaoSorteada.resposta_correta) {
         addxp(1).then(qtdXp => {
             let funProgresso = calcularProgressoXP(qtdXp)
@@ -89,7 +90,26 @@ function validar() {
         })
         iniciar();
     } else {
-        exibir.innerHTML = "<p class='p1'>Você errou 😭<p/>"
+        if (opcaoSelecionada == 'a') {
+            divalt_A.style.background = 'red';
+        } else if (opcaoSelecionada == 'b') {
+            divalt_B.style.background = 'red';
+        } else if (opcaoSelecionada == 'c') {
+            divalt_C.style.background = 'red';
+        } else if (opcaoSelecionada == 'd') {
+            divalt_D.style.background = 'red';
+        }
+        if (questaoSorteada.resposta_correta == 'a') {
+            divalt_A.style.background = 'green';
+        } else if (questaoSorteada.resposta_correta == 'b') {
+            divalt_B.style.background = 'green';
+        } else if (questaoSorteada.resposta_correta == 'c') {
+            divalt_C.style.background = 'green';
+        } else if (questaoSorteada.resposta_correta == 'd') {
+            divalt_D.style.background = 'green';
+        }
+        looser();
+
     }
 }
 
@@ -189,13 +209,11 @@ function clicked(alternativa) {
 
         if (elementoSelecionado.id === 'divalternativaA') {
             let radioBtn = document.getElementById('a');
-            console.log('a');
             if (radioBtn) {
                 radioBtn.checked = true;
             }
         } else if (elementoSelecionado.id === 'divalternativaB') {
             let radioBtn = document.getElementById('b');
-            console.log('b');
 
             if (radioBtn) {
                 radioBtn.checked = true;
@@ -203,14 +221,12 @@ function clicked(alternativa) {
 
         } else if (elementoSelecionado.id === 'divalternativaC') {
             let radioBtn = document.getElementById('c');
-            console.log('c');
 
             if (radioBtn) {
                 radioBtn.checked = true;
             }
         } else if (elementoSelecionado.id === 'divalternativaD') {
             let radioBtn = document.getElementById('d');
-            console.log('d');
 
             if (radioBtn) {
                 radioBtn.checked = true;
@@ -258,4 +274,14 @@ function proximaregra() {
         botao.style.display = 'block'
         botao3.style.display = 'none'
     }
+}
+
+
+
+function looser() {
+    const carlaoimg = document.querySelector('#carlao');
+    carlaoimg.src = "./img/carlaochoro.gif";
+    nq.innerHTML = "";
+
+    enunciado.innerHTML = "ASSIM NÃO JÓVEM!!!!!!!!!!!!!!!!!";
 }

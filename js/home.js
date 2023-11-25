@@ -31,8 +31,24 @@ function enterMouse(element) {
 function sairCard(element){
     const card = document.getElementById(`e${element}`)
     // console.log(card);
-    card.setAttribute('style', 'scale:1.0')
-    
+    card.setAttribute('style', 'scale:1.0')   
 }
 
 
+let clique = 0;
+function easterEgg() {
+    const fala = document.querySelector(".benvindojovem");
+    clique++;
+    if(clique == 5) {
+        fala.innerHTML = "Nós somos jóvens 🎶🎵";
+    } else if (clique == 10) {
+        fala.innerHTML = "Salsifufu";
+    } else if (clique == 15) {
+        fala.innerHTML = "Seta Jóvem, seta";
+    } else if (clique == 20) {
+        fala.innerHTML = "Seja bem Vindo Jóvem!";
+        clique = 0
+    }
+    
+
+}
