@@ -11,7 +11,7 @@ if (!isset($_SESSION["logado"]) or $_SESSION['permission'] != 'admin') {
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link rel="stylesheet" href="./css/addquestao.css">
     <link rel="icon" href="./img/brain.svg">
     <title>Adicionar questão</title>

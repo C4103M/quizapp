@@ -64,7 +64,7 @@ body {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background: #c2c2c2;
+    background: var(--main-elementos);
     border-radius: 50%;
     transition: .4s;
 }
@@ -99,6 +99,10 @@ header {
     display: flex;
 }
 
+.div-medalha > img{
+    display: flex;
+
+}
 .ftperfil {
     width: 50px;
     height: 50px;
@@ -126,13 +130,16 @@ header {
 
 }
 .div-poweroff {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     background-color: #F3F3F3;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.div-poweroff img {
+    width: 100%;
 }
 .div-foto {
     margin: 5px;
@@ -168,7 +175,7 @@ header {
 .poweroff {
     margin: 50px;
     position: absolute;
-    right: 0px;
+    left: 0;
     display: flex;
     align-items: center;
 }
@@ -192,7 +199,7 @@ header {
     }
     .grid1 {
         margin: 10px;
-        width: 420px;
+        width: 400px;
         justify-content: baseline;
     }
     .barra {
@@ -214,7 +221,13 @@ header {
         top: 1px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 375px)  {
+    .grid1 {
+        width: 369px;
+        margin: 10px 0;
+    }
+}
+@media (max-width: 320px) {
     .grid1 {
         width: 310px;
         margin: 10px 0;

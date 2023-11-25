@@ -23,6 +23,9 @@ function soltCard(element){
         location.href = "./addquestao.php"
     }
     if (element == 7){
+        changeMode();
+    }
+    if (element == 8){
         location.href = "./config/logout.php"
     }
 

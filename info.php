@@ -9,7 +9,7 @@ if (!isset($_SESSION["logado"])) {
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link rel="stylesheet" href="./css/info.css">
     <link rel="icon" href="./img/brain.svg">
     <title>INFO</title>

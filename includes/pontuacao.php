@@ -46,8 +46,7 @@ if ($resultado) {
                     </div>
                     <div class='position'>
                         <div class='container-bar'>
-                            <img src='img/medal.svg' alt='medal' class='icons'>
-                            <img src='img/dark-mode/medal.svg' alt='medal' class='icons2'>
+                            <img src='img/medal.svg' alt='medal'>
                             <div class='lvl-placar'>
                                 <script>
                                     var prog = calcularProgressoXP({$user_xp[$user['user_id']]}); 
