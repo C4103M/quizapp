@@ -60,7 +60,7 @@ if (isset($_GET["erro"])) {
                     <span class="t1">Login</span>
                     <form action="" class="formLogin" method="post">
                         <div class="item">
-                            <i><img src="./img/email.svg" alt=""></i>
+                            <i><img src="./img/envelope.svg" alt=""></i>
                             <input type="email" placeholder="Email:" name="email_entrar" required>
                         </div>
                         <div class="item">
