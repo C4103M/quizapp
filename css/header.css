@@ -179,6 +179,11 @@ header {
     display: flex;
     align-items: center;
 }
+.div-voltar {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
 
 @media (max-width: 500px) {
     * {
@@ -198,8 +203,8 @@ header {
         display: none;
     }
     .grid1 {
-        margin: 10px;
-        width: 400px;
+        margin: 10px 0;
+        width: 100%;
         justify-content: baseline;
     }
     .barra {
@@ -220,19 +225,28 @@ header {
     .lvl {
         top: 1px;
     }
+    .div-voltar {
+        display: none;
+    }
 }
 @media (max-width: 375px)  {
     .grid1 {
-        width: 369px;
+        width: 100%;
         margin: 10px 0;
+    }
+    .div-voltar {
+        display: none;
     }
 }
 @media (max-width: 320px) {
     .grid1 {
-        width: 310px;
+        width: 100%;
         margin: 10px 0;
     }
     #medalha {
+        display: none;
+    }
+    .div-voltar {
         display: none;
     }
 }

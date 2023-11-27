@@ -20,13 +20,17 @@
             </div>
         </div>
     </div>
+    <div class="div-voltar">
+        <img src="./img/seta.svg" alt="">
+    </div>
 
 
 </header>
 <script>
-    let logout = document.querySelector('.div-poweroff');
+var voltar = document.querySelector(".div-voltar");
 
-    
+voltar.addEventListener('click', () => {
+    window.location = './home.php'
 
-    
+})
 </script>

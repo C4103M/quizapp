@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;900&family=Roboto:wght@300&display=swap");
-
+@font-face {
+    font-family: "Pixel";
+    src: url("../font/fonte1/Cloude_Regular_Bold_1.02.otf") format("truetype");
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,18 +10,19 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Pixel", sans-serif;
     width: 100%;
     height: 100vh;
 }
 
 main {
-    width: 520px;
+    width: 600px;
     margin: auto;
 }
 main p {
-    font-family: 'Roboto';
-    font-size: 1.2rem;
+    font-family: Pixel;
+    font-size: 1.5rem;
+    line-height: 45px;
     text-align: justify;
 
 }
@@ -62,3 +65,13 @@ button {
     border-radius: 10px;
 }
 
+@media (max-width:600px) {
+    main {
+        width: 320px;
+        padding: 10px;
+    }
+    main p {
+        font-size: 2rem;
+
+    }
+}

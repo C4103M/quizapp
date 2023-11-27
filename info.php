@@ -1,6 +1,7 @@
 <?php
 session_start();
 $nome = $_SESSION['user_name'];
+$img = $_SESSION['foto_perfil'];
 if (!isset($_SESSION["logado"])) {
     header("Location:index.php?erro=2");
 }
@@ -12,7 +13,7 @@ if (!isset($_SESSION["logado"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link rel="stylesheet" href="./css/info.css">
     <link rel="icon" href="./img/brain.svg">
-    <title>INFO</title>
+    <title>Informações</title>
 </head>
 
 <body>
@@ -33,7 +34,14 @@ if (!isset($_SESSION["logado"])) {
             <input type="hidden" name="_next" value="./localhost/quizapp/config/obrigado.html">
         </form>
     </main>
-
+    <?php
+    include('includes/modal.php');
+    $exp = $_SESSION['user_xp'];
+    print "<p id='exphp' style='display:none'>$exp</p>";
+    print "<p id='imgphp' style='display:none;'>$img</p>";
+    ?>
+    <script src="js/calcnvl.js"></script>
+    <script src="js/img.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="./js/darkmode.js"></script>
 </body>

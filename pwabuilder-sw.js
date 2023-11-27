@@ -45,3 +45,36 @@ self.addEventListener('fetch', (event) => {
     })());
   }
 });
+
+self.addEventListener('install', function (event) {
+  event.waitUntil(
+    caches.open('cache-nome').then(function (cache) {
+      return cache.addAll([
+        './font/fonte1/Cloude_Regular_Bold_1.02.otf'
+        // Adicione todos os arquivos que você deseja armazenar em cache
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', function (event) {
+  event.respondWith(
+    caches.match(event.request).then(function (response) {
+      // Se o recurso estiver no cache, retorna diretamente do cache
+      if (response) {
+        return response;
+      }
+
+      // Se o recurso não estiver no cache, busca na rede e armazena em cache para futuras solicitações
+      return fetch(event.request).then(function (networkResponse) {
+        // Abre o cache e armazena a cópia da rede para uso futuro
+        caches.open('cache-nome').then(function (cache) {
+          cache.put(event.request, networkResponse.clone());
+        });
+
+        // Retorna a resposta da rede
+        return networkResponse;
+      });
+    })
+  );
+});

@@ -36,6 +36,7 @@ if (isset($_GET["erro"])) {
 </head>
 
 <body>
+    
     <main>
         <section class="divwelcome">
             <section class="boasvindas">
@@ -78,11 +79,11 @@ if (isset($_GET["erro"])) {
                     <span class="t1">Cadastrar</span>
                     <form action="" class="formLogin" method="post">
                         <div class="item">
-                            <i><img src="./img/altername.svg" alt=""></i>
+                            <i><img src="./img/envelope.svg" alt=""></i>
                             <input type="text" placeholder="Nome de Usuário:" name="nome" required>
                         </div>
                         <div class="item">
-                            <i><img src="./img/email.svg" alt=""></i>
+                            <i><img src="./img/envelope.svg" alt=""></i>
                             <input type="email" placeholder="Email:" name="email" required>
                         </div>
                         <div class="item">
@@ -106,11 +107,10 @@ if (isset($_GET["erro"])) {
             </div>
         </section>
         <div class="divspan">
-            <span class="span1">Quiz</span><br>
-            <span class="span2">Info</span>
+            <span class="span1"><img src="./img/quizinfo.PNG" alt=""></span><br>
         </div>
  
-
+    </div>
 
 
     </main>

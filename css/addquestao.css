@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    line-height: 30px;
 }
 
 :root {
@@ -33,6 +34,9 @@ textarea {
     border: none;
     border-radius: 5px;
     margin: 5px;
+    height: 100px;
+    width: 100%;
+    resize: vertical
 }
 
 .label-pergunta {
@@ -53,18 +57,16 @@ textarea {
     border: none;
     background-color: var(--main-elementos);
     margin: 20px 0;
-    font-size: 12pt;
+    font-size: 1.5rem;
 
 }
 
 .btn2 {
-    width: 60px;
-    height: 60px;
+    background-color: transparent;
     border-radius: 100%;
     padding: 5px;
     margin: 20px 0;
     border: none;
-    background-color: var(--main-elementos);
 }
 
 #more {

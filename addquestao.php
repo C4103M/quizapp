@@ -26,19 +26,19 @@ if (!isset($_SESSION["logado"]) or $_SESSION['permission'] != 'admin') {
             <div class="pai">
                 <div class="pergunta">
                     <label for="pergunta1" class="label-pergunta">Pergunta 1</label>
-                    <textarea name="pergunta[]" id="pergunta1" cols="40" rows="5"></textarea>
+                    <textarea name="pergunta[]" id="pergunta1" ></textarea>
 
                     <label for="alternativa_a1" class="label-pergunta">Alternativa A</label>
-                    <textarea name="alternativa_a[]" id="alternativa_a1" cols="40" rows="5"></textarea>
+                    <textarea name="alternativa_a[]" id="alternativa_a1" ></textarea>
 
                     <label for="alternativa_b1" class="label-pergunta">Alternativa B</label>
-                    <textarea name="alternativa_b[]" id="alternativa_b1" cols="40" rows="5"></textarea>
+                    <textarea name="alternativa_b[]" id="alternativa_b1" ></textarea>
 
                     <label for="alternativa_c1" class="label-pergunta">Alternativa C</label>
-                    <textarea name="alternativa_c[]" id="alternativa_c1" cols="40" rows="5"></textarea>
+                    <textarea name="alternativa_c[]" id="alternativa_c1" ></textarea>
 
                     <label for="alternativa_d1" class="label-pergunta">Alternativa D</label>
-                    <textarea name="alternativa_d[]" id="alternativa_d1" cols="40" rows="5"></textarea>
+                    <textarea name="alternativa_d[]" id="alternativa_d1" ></textarea>
 
                     <div class="labes">
                         <div>
@@ -65,7 +65,7 @@ if (!isset($_SESSION["logado"]) or $_SESSION['permission'] != 'admin') {
             </div>
             <div class="finalform">
                 <button type="submit" class="btn1" name="enviar">Cadastrar perguntas</button>
-                <button onclick="duplicarDiv()" type="button" class="btn2"><i><img src="./img/more.svg" alt="" id="more"></i></button>
+                <button onclick="duplicarDiv()" type="button" class="btn2"><img src="./img/add.svg" alt=""></button>
             </div>
         </form>
     </main>

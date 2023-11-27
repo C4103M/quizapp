@@ -5,13 +5,13 @@ const btnlogin = document.querySelector(".btnlogin");
 const diventrar = document.querySelector('.entrar');
 
 const span1 = document.querySelector('.span1');
-const span2 = document.querySelector('.span2');
+// const span2 = document.querySelector('.span2');
 const form1 = document.querySelector('.form1');
 const form2 = document.querySelector('.form2');
 
 function entrar(){
     span1.style.animation = 'span1 1s normal forwards';
-    span2.style.animation = 'span2 1s normal forwards';
+    // span2.style.animation = 'span2 1s normal forwards';
     divwelcome.style.animation = 'welcome 1s normal forwards';
     cliqueaqui.style.display = 'none';
 
@@ -19,7 +19,7 @@ function entrar(){
 }
 function cadastrar() {
     span1.style.animation = 'span1 1s normal forwards';
-    span2.style.animation = 'span2 1s normal forwards';
+    // span2.style.animation = 'span2 1s normal forwards';
     divwelcome.style.animation = 'welcome 1s normal forwards';
     cliqueaqui.style.display = 'none';
 
