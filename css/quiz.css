@@ -130,12 +130,6 @@ main {
 #btn1 {
     display: none;
 }
-.btnReiniciar {
-    /* position: absolute; */
-    bottom: 30px;
-    right: 100px;
-    z-index: 10 ;
-}
 .opc1 {
     font-family: Pixel, "Arial";
     font-size: 30pt;
@@ -158,6 +152,20 @@ main {
     display: none;
     color: #f3f3f3;
     line-height: 10px;
+}
+
+.btn-reiniciar {
+    display: none;
+    flex-direction: row;
+}
+
+.btn-reiniciar button {
+    width: 45%;
+    height: 60px;
+    line-height: 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
 }
  
 @media (max-width: 1024px) { 

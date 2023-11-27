@@ -64,6 +64,10 @@ if (!isset($_SESSION["user_id"])) {
                     <input type="button" onclick="validar()" id="btn2" value="Validar">
                 </form>
             </div>
+            <div class="btn-reiniciar">
+                <button onclick="reiniciar()">Reiniciar</button>
+                <button onclick="reiniciarArea()">Area Conhecimento</button>
+            </div>
             <div class="opc">
                 <figure class="balao2">
                     <img src="./img/balao2.svg" alt="" class="balon">

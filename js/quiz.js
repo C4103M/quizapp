@@ -11,6 +11,8 @@ const lb = document.querySelector(".lb");
 const lc = document.querySelector(".lc");
 const ld = document.querySelector(".ld");
 
+const carlaoimg = document.querySelector('#carlao');
+const btnReiniciar = document.querySelector('.btn-reiniciar');
 
 
 const pBemVindos = document.querySelector(".inicialText")
@@ -48,6 +50,8 @@ const addxp = async (pagina) => {
 
 
 const iniciar = async () => {
+
+    btnReiniciar.style.display = 'none';
 
     let checkbox1 = document.getElementById('check1');
     let checkbox2 = document.getElementById('check2');
@@ -192,13 +196,29 @@ function calcularProgressoXP(experiencia) {
 
 
 
+// Adicione o evento de clique aos elementos
+divalt_A.addEventListener('click', function () {
+    clicked(divalt_A);
+});
+
+divalt_B.addEventListener('click', function () {
+    clicked(divalt_B);
+});
+
+divalt_C.addEventListener('click', function () {
+    clicked(divalt_C);
+});
+
+divalt_D.addEventListener('click', function () {
+    clicked(divalt_D);
+});
 function clicked(alternativa) {
     if (elementoSelecionado === alternativa) {
-        // Se o elemento já estiver selecionado, volte ao padrão (background white)
+        // Se o elemento já estiver selecionado, volte ao padrão (background elementos)
         alternativa.style.background = 'var(--main-elementos)';
         elementoSelecionado = null;
     } else {
-        // Se outro elemento estiver selecionado, volte ao padrão (background white)
+        // Se outro elemento estiver selecionado, volte ao padrão (background elementos)
         if (elementoSelecionado) {
             elementoSelecionado.style.background = 'var(--main-elementos)';
         }
@@ -235,22 +255,6 @@ function clicked(alternativa) {
     }
 }
 
-// Adicione o evento de clique aos elementos
-divalt_A.addEventListener('click', function () {
-    clicked(divalt_A);
-});
-
-divalt_B.addEventListener('click', function () {
-    clicked(divalt_B);
-});
-
-divalt_C.addEventListener('click', function () {
-    clicked(divalt_C);
-});
-
-divalt_D.addEventListener('click', function () {
-    clicked(divalt_D);
-});
 
 const botao3 = document.querySelector('#btn3')
 let contregra = 1
@@ -279,9 +283,43 @@ function proximaregra() {
 
 
 function looser() {
-    const carlaoimg = document.querySelector('#carlao');
+    botao2.style.display = 'none'
+
+
     carlaoimg.src = "./img/carlaochoro.gif";
     nq.innerHTML = "";
 
     enunciado.innerHTML = "ASSIM NÃO JÓVEM!!!!!!!!!!!!!!!!!";
+
+    btnReiniciar.style.display = 'flex';
+}
+
+function reiniciar () {
+    carlaoimg.src = './img/carlaoembranco.gif';
+
+    numQuestao = 1;
+
+    
+    divalt_A.style.background = 'var(--main-elementos)';
+    divalt_B.style.background = 'var(--main-elementos)';
+    divalt_C.style.background = 'var(--main-elementos)';
+    divalt_D.style.background = 'var(--main-elementos)';
+
+
+
+
+    iniciar();
+    
+} 
+
+function reiniciarArea () {
+    carlaoimg.src = './img/carlaoembranco.gif';
+
+    exibir.style.display = 'none';
+    btnReiniciar.style.display = 'none';
+
+    nq.innerHTML = 'Sobre qual assunto você deseja estudar? '
+    opc.style.display = 'block'
+    botao.style.display = 'block'
+    botao3.style.display = 'none'
 }

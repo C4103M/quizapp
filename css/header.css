@@ -29,6 +29,7 @@
 body {
     background-color: var(--main-background);
     transition: ease .1s;
+    overflow-x: hidden;
 }
  
 .switch {
