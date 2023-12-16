@@ -59,10 +59,10 @@ body {
 }
 
 .formLogin {
-    width: 80%;
+    width: 100%;
     position: relative;
     top: 30%;
-    margin: 0 auto 0 10%;
+    margin: 0 auto;
     outline: 0;
     display: flex;
     justify-content: center;
@@ -205,7 +205,8 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-width: 300px;
+    min-width: 450px;
+    padding: 50px;
 }
 
 .div-boasvindas {
@@ -219,6 +220,8 @@ section {
     font-family: Pixel;
     font-size: 3.5em;
     line-height: 22px;
+    position: relative;
+    left: -40px;
 }
 
 
@@ -237,7 +240,7 @@ main {
 }
 .carlaologin {
     position: relative;
-    width: 90%;
+    width: 650px;
     margin-right: 10px;
 }
 .butonAnimar {
@@ -264,7 +267,7 @@ main {
         transform: translate(0, 10%);
     }
     to {
-        transform: translate(-18%, 0);
+        transform: translate(-15%, 0);
     }
 }
 
@@ -275,9 +278,10 @@ main {
         height: 100%;
     }
     to {
-        transform: translate(140%, 0);
-        width: 25%;
-        height: 90%;
+        transform: translate(150%, 0);
+        width: 20%;
+        min-width: auto;
+        height: 80%;
         border-radius: 30px;
     }
 }
@@ -290,6 +294,14 @@ main {
         top: 10px;
         width: 60%;
     }
+    .carlaologin {
+        position: relative;
+        width: 650px;
+        left: 60px;
+    }
+    .divwelcome {
+        padding: 50px;
+    }
     @keyframes welcome {
         from {
             transform: translate(0, 0);
@@ -297,24 +309,46 @@ main {
             height: 100%;
         }
         to {
-            transform: translate(120%, 0);
-            width: 25%;
-            height: 90%;
+            transform: translate(70%, 0);
+            width: 15%;
+            min-width: 350px;
+            height: 80%;
             border-radius: 30px;
+        }
+    }
+    @keyframes span1 {
+        from {
+            transform: translate(0, 10%);
+        }
+        to {
+            transform: translate(-45%, 0);
         }
     }
 }
 
 @media (max-width: 768px) {
+    .divwelcome {
+        min-width: auto;
+        width: 40%;
+        padding: 20px;
+    }
+    .carlaologin {
+        position: relative;
+        width: 400px;
+        left: 10px;
+    }
+    .pboasvindas {
+        font-size: 2.3rem;
+        line-height: 14px;
+    }
     @keyframes welcome {
         from {
             transform: translate(0, 0);
-            width: 35%;
             height: 100%;
         }
         to {
             transform: translate(80%, 0);
-            width: 25%;
+            width: 40%;
             height: 90%;
             border-radius: 30px;
         }
@@ -341,14 +375,27 @@ main {
     }
     @keyframes welcome {
     }
+    main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
     .divwelcome {
         width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    .butonAnimar {
+        position: relative;
+        left: -20px;
     }
     .divspan {
         display: none;
         width: 100%;
         height: 400px;
         justify-content: center;
+        align-items: normal;
         position: absolute;
         z-index: -7;
     }
@@ -368,12 +415,13 @@ main {
         
     }
     .item {
-        margin-bottom: 50px;
+        margin-bottom: 35px;
     }
-    main {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: start;
+    .form2 {
+        margin: 0;
+    }
+    .termos {
+        font-size: 0.8rem;
+        line-height: 20px;
     }
 }

@@ -39,7 +39,7 @@ if (!empty($pagina)) {
     $json_data = json_encode(array("questoes" => $questoes_array), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
     // Escreve o JSON em um arquivo
-    // $file_path = "questoes.json";
+    // // $file_path = "questoes.json";
     // file_put_contents($file_path, $json_data);
 
     // echo "Arquivo JSON criado com sucesso!";

@@ -53,13 +53,25 @@ const iniciar = async () => {
 
     btnReiniciar.style.display = 'none';
 
+    let resetElement1, resetElement2;
+
+    ["a", "b", "c", "d"].forEach((item) => {
+        resetElement1 = document.getElementById(item);
+        resetElement1.checked = false;
+    });
+
+    ["divalternativaA", "divalternativaB", "divalternativaC", "divalternativaD"].forEach((item) => {
+        resetElement2 = document.getElementById(item);
+        resetElement2.style.background = 'var(--main-elementos)';
+    });
+
     let checkbox1 = document.getElementById('check1');
     let checkbox2 = document.getElementById('check2');
     let checkbox3 = document.getElementById('check3');
     let checkbox4 = document.getElementById('check4');
     let checkbox5 = document.getElementById('check5');
 
-    if (checkbox1.checked  || checkbox2.checked || checkbox3.checked || checkbox4.checked || checkbox5.checked) {
+    if (checkbox1.checked || checkbox2.checked || checkbox3.checked || checkbox4.checked || checkbox5.checked) {
 
         const questaoSorteada = await sortear();
 
@@ -294,12 +306,12 @@ function looser() {
     btnReiniciar.style.display = 'flex';
 }
 
-function reiniciar () {
+function reiniciar() {
     carlaoimg.src = './img/carlaoembranco.gif';
 
     numQuestao = 1;
 
-    
+
     divalt_A.style.background = 'var(--main-elementos)';
     divalt_B.style.background = 'var(--main-elementos)';
     divalt_C.style.background = 'var(--main-elementos)';
@@ -309,10 +321,10 @@ function reiniciar () {
 
 
     iniciar();
-    
-} 
 
-function reiniciarArea () {
+}
+
+function reiniciarArea() {
     carlaoimg.src = './img/carlaoembranco.gif';
 
     exibir.style.display = 'none';

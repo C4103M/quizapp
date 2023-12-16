@@ -8,7 +8,7 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["senha"])) {
     $senha = $_POST["senha"];
     $senha = md5($senha);
     $con = conecta_mysql();
-    $sql = "INSERT INTO usuarioS (user_name,user_email,user_password) VALUES ('$nome','$email','$senha')";
+    $sql = "INSERT INTO usuarios (user_name,user_email,user_password) VALUES ('$nome','$email','$senha')";
     if (mysqli_query($con, $sql)) {
         $sql2 = "SELECT * FROM usuarios
     WHERE user_email = '$email'

@@ -1,5 +1,5 @@
 <?php
-session_set_cookie_params(['lifetime' => (3*(24*(60*(60)))), 'httponly' => true]);
+session_set_cookie_params(['lifetime' => (3 * (24 * (60 * (60)))), 'httponly' => true]);
 session_start();
 
 if (isset($_SESSION['logado']) and $_SESSION['logado']) {
@@ -23,28 +23,29 @@ if (isset($_GET["erro"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <link rel="manifest" crossorigin="use-credentials" href="manifest.json"/>  
+    <link rel="manifest" crossorigin="use-credentials" href="manifest.json" />
     <link rel="stylesheet" href="./css/form.css">
     <link rel="icon" href="./img/brain.svg">
     <!-- <link rel="stylesheet" href="./css/header.css"> -->
     <title>Login</title>
-      <script>
-		if (typeof navigator.serviceWorker !== 'undefined') {
-			navigator.serviceWorker.register('pwabuilder-sw.js')
-		}
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('pwabuilder-sw.js')
+        }
     </script>
 </head>
 
 <body>
-    
+
     <main>
         <section class="divwelcome">
             <section class="boasvindas">
                 <div class="inicialpage">
-                    <i><img src="./img/carlao2.png" class="carlaologin" alt=""></i>
+                    <i><img src="./img/carlaoembranco.gif" class="carlaologin" alt=""></i>
                     <div class="div-boasvindas">
                         <p class="pboasvindas">
                             Bem-vindo ao nosso emocionante Quiz de Informática!
+                        </p>
                     </div>
                 </div>
             </section>
@@ -76,6 +77,7 @@ if (isset($_GET["erro"])) {
                     </form>
                 </div>
                 <div class="form2">
+
                     <span class="t1">Cadastrar</span>
                     <form action="" class="formLogin" method="post">
                         <div class="item">
@@ -96,7 +98,7 @@ if (isset($_GET["erro"])) {
                         </div>
                         <div class="inp-termos">
                             <input type="checkbox" name="meucheckbox" required>
-                            <p>Eu li e aceito todos os <a href="./termos-de-uso.html">termos de uso</a> e <a href="./politica-de-privacidade.html">políticas de privacidade</a></p>
+                            <p class="termos">Eu li e aceito todos os <a href="./termos-de-uso.html">termos de uso</a> e <a href="./politica-de-privacidade.html">políticas de privacidade</a></p>
                         </div>
                         <div class="item">
                             <p class="cadparagrafo">Já possui conta?<br> <button class="btn-none" onclick="troca1()">Entrar</button></p>
@@ -107,10 +109,10 @@ if (isset($_GET["erro"])) {
             </div>
         </section>
         <div class="divspan">
-            <span class="span1"><img src="./img/quizinfo.PNG" alt=""></span><br>
+            <span class="span1"><img src="./img/quizinfo.png" alt=""></span><br>
         </div>
- 
-    </div>
+
+        </div>
 
 
     </main>

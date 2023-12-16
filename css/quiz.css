@@ -167,7 +167,10 @@ main {
     border: none;
     margin: 10px;
 }
- 
+#val {
+    position: relative;
+    top: -10px;
+}
 @media (max-width: 1024px) { 
     .btn {
         bottom: 50px;
@@ -235,4 +238,9 @@ main {
     .exibir {
         font-size: 1px;
     }
+    #val {
+        position: relative;
+        top: 0;
+    }
 }
+ 

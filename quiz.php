@@ -61,7 +61,7 @@ if (!isset($_SESSION["user_id"])) {
                             <span class="ld"></span>
                         </p>
                     </div>
-                    <input type="button" onclick="validar()" id="btn2" value="Validar">
+                    <button type="button" onclick="validar()" id="btn2" ><p id="val">Validar</p></button>
                 </form>
             </div>
             <div class="btn-reiniciar">
