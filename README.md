@@ -12,3 +12,4 @@ Divirta-se e Boa Sorte!
 Quiz projetado em PHP, Javascript, HTML e CSS, além de utilizar banco de dados MySQL.
 O projeto é código aberto, portanto fique a vontade para melhorá-lo.
 
+A versão atual pode ser acessada em: https://quizapp01.42web.io/?i=1
