@@ -1,4 +1,4 @@
-Quiz de Informática
+#Quiz de Informática
 
 Bem-vindo ao nosso Quiz de Informática! Este é um jogo interativo projetado por Caio Emanoel para testar os conhecimentos dos usuários sobre computadores, programação, tecnologia e tudo mais relacionado à informática. Se você é um entusiasta da tecnologia ou apenas quer testar seus conhecimentos básicos, este é o lugar certo para você.
 
